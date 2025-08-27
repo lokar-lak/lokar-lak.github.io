@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="be">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Беларуская лакалізацыя</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Montserrat Alternates', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            color: #A9FF8E;
+            font-size: 18px;
+            margin: 10px 0 0 10px;
+        }
+        nav {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            margin-left: 10px;
+        }
+        nav a {
+            color: #A9FF8E;
+            text-decoration: none;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+        .header-left {
+            flex: 1;
+        }
+        .main-title {
+            font-size: 48px;
+            color: #A9FF8E;
+            margin: 20px 0 10px 0;
+        }
+        .subtitle {
+            font-size: 16px;
+            margin: 0;
+            max-width: 600px;
+        }
+        .header-right {
+            text-align: right;
+            margin-left: 20px;
+        }
+        .header-right span {
+            display: block;
+            color: #A9FF8E;
+            font-size: 16px;
+        }
+        .header-right img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+        .header-right .game-name {
+            font-size: 18px;
+            color: #ffffff;
+            margin: 10px 0;
+        }
+        .game-button {
+            background-color: #A9FF8E;
+            color: #000000;
+            padding: 8px 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            font-size: 14px;
+        }
+        .game-section {
+            padding: 20px;
+        }
+        .game-card {
+            background-color: #0E120D;
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-radius: 5px;
+        }
+        .game-card img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 5px;
+        }
+        .game-info {
+            flex: 1;
+        }
+        .game-title {
+            font-size: 24px;
+            color: #ffffff;
+            margin: 0 0 10px 0;
+        }
+        .game-desc {
+            font-size: 14px;
+            color: #ffffff;
+            margin: 0 0 10px 0;
+        }
+        footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #0E120D;
+            color: #ffffff;
+        }
+        footer div {
+            text-align: center;
+        }
+        footer h3 {
+            color: #A9FF8E;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        footer a {
+            color: #A9FF8E;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+        .copyright {
+            text-align: center;
+            font-size: 12px;
+            color: #ffffff;
+            background-color: #0E120D;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">tokar</div>
+    <nav>
+        <a href="#">падпрымальныя</a>
+        <a href="#">камандныя</a>
+        <a href="#">гульні</a>
+        <a href="#">пераклады</a>
+    </nav>
+    <div class="header-container">
+        <div class="header-left">
+            <h1 class="main-title">Беларуская лакалізацыя</h1>
+            <p class="subtitle">tokar — гама каманда, якая займаецца лакалізацыяй гульняў на беларускую мову. Мы перакладаем Stardew Valley, Mouthwashing, і прыбіральныя ўжен перкладзе Heroes of Might and Magic III.</p>
+        </div>
+        <div class="header-right">
+            <span>Час перакладзель <img src="images/avatar.jpg" alt="Avatar"></span>
+            <div class="game-name">Valheim</div>
+            <a href="#" class="game-button">Дадучыцца</a>
+        </div>
+    </div>
+
+    <div class="game-section">
+        <!-- Прыклад гульні. Каб дадаць новую, скапіюйце гэты блок .game-card і абнавіце выяву, назву, апісанне і спасылку кнопкі -->
+        <div class="game-card">
+            <img src="images/stardewvalley.png" alt="Stardew Valley">
+            <div class="game-info">
+                <h2 class="game-title">Stardew Valley</h2>
+                <p class="game-desc">Вы смялец, які абраўся ў спадчыну дзяды ў сельскую мясцовасьць. Гэта RPG з элементамі фермы, дзе вы разьвіваеце гаспадарку, зносіцеся з жыхарамі і шукаеце скарбы.</p>
+                <a href="#" class="game-button">Падрабязней</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="images/mouthwashing.jpg" alt="Mouthwashing">
+            <div class="game-info">
+                <h2 class="game-title">Mouthwashing</h2>
+                <p class="game-desc">Гэта жахі з абліччам па ўсяму. Праграмны код, акустычныя эфекты, візуальныя элементы. Гэта для ix не мітне.</p>
+                <a href="#" class="game-button">Падрабязней</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="images/heroes3.jpg" alt="Heroes of Might & Magic 3">
+            <div class="game-info">
+                <h2 class="game-title">Heroes of Might & Magic 3</h2>
+                <p class="game-desc">Пакрокавая стратэгія з элементамі RPG. Вы зьбіраеце войска, змагаецеся з ворагамі і разьвіваеце гарады. Класіка жанру.</p>
+                <a href="#" class="game-button">Падрабязней</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <img src="images/valheim.jpg" alt="Valheim">
+            <div class="game-info">
+                <h2 class="game-title">Valheim</h2>
+                <p class="game-desc">Выжыванне ў сьвеце вікінгаў. Будаваньне, змаганьне з монстрамі, даследаваньне. Падтрымка для PC, Xbox і Linux.</p>
+                <a href="#" class="game-button">Падрабязней</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <h3>падпрымальныя</h3>
+            <a href="#">Patreon</a>
+            <a href="#">Boosty</a>
+        </div>
+        <div>
+            <h3>гульніцыя</h3>
+            <a href="#">Google Forms</a>
+        </div>
+        <div>
+            <h3>сацыемкі</h3>
+            <a href="#">Twitter</a>
+            <a href="#">Telegram</a>
+            <a href="#">TikTok</a>
+        </div>
+    </footer>
+    <p class="copyright">© 2025 - tokar</p>
+</body>
+</html>
