@@ -4,25 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Беларуская лакалізацыя</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #000000;
+            background-color: #000000; /* Основной фон сайта */
             color: #ffffff;
             font-family: 'Montserrat Alternates', sans-serif;
             margin: 0;
             padding: 0;
         }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin-left: 0px;
+            margin-right: 30px;
+            font-weight: 700;
+            font-size: 18px;
+        }
         .logo {
             color: #A9FF8E;
-            font-size: 18px;
-            margin: 10px 0 0 10px;
+            font-size: 32px; /* Размер текста названия команды */
+            font-weight: 1000; /* Тлустый шрифт для названия */
+            margin: 0px 10px 0px 40px;
         }
         nav {
             display: flex;
-            justify-content: flex-start;
-            gap: 20px;
-            margin-left: 10px;
+            gap: 30px;
+            margin: 0;
         }
         nav a {
             color: #A9FF8E;
@@ -32,7 +42,16 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            padding: 20px;
+            padding: 0px;
+        }
+        .header-alignment {
+            width: 85%;
+            max-width: 1500px;
+            margin: 20px auto;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
         }
         .header-left {
             flex: 1;
@@ -41,6 +60,7 @@
             font-size: 48px;
             color: #A9FF8E;
             margin: 20px 0 10px 0;
+            font-weight: 700;
         }
         .subtitle {
             font-size: 16px;
@@ -48,21 +68,18 @@
             max-width: 600px;
         }
         .header-right {
-            text-align: right;
+            text-align: center;
             margin-left: 20px;
+            margin-right: 0px;
+            margin-top: 30px;
         }
         .header-right span {
             display: block;
             color: #A9FF8E;
             font-size: 16px;
         }
-        .header-right img {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            vertical-align: middle;
-        }
         .header-right .game-name {
+            text-align: center;
             font-size: 18px;
             color: #ffffff;
             margin: 10px 0;
@@ -78,17 +95,23 @@
         }
         .game-section {
             padding: 20px;
+            transition: filter 0.3s ease;
         }
         .game-card {
             background-color: #0E120D;
-            width: 80%;
-            max-width: 800px;
+            width: 85%;
+            max-width: 1500px;
             margin: 20px auto;
-            padding: 20px;
+            padding: 30px;
             display: flex;
             align-items: center;
             gap: 20px;
             border-radius: 5px;
+            transition: filter 0.3s ease;
+            cursor: pointer;
+        }
+        .game-card:hover {
+            filter: brightness(0.8);
         }
         .game-card img {
             max-width: 200px;
@@ -97,16 +120,29 @@
         }
         .game-info {
             flex: 1;
+            display: flex;
+            flex-direction: column;
         }
         .game-title {
             font-size: 24px;
-            color: #ffffff;
+            color: #A9FF8E;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+        .game-platforms {
+            font-size: 12px;
+            color: #A9FF8E;
             margin: 0 0 10px 0;
         }
         .game-desc {
             font-size: 14px;
             color: #ffffff;
-            margin: 0 0 10px 0;
+            margin: 0;
+            max-width: 900px;
+        }
+        .button-container {
+            align-self: center;
+            margin-left: auto;
         }
         footer {
             display: flex;
@@ -122,6 +158,7 @@
             color: #A9FF8E;
             font-size: 16px;
             margin-bottom: 10px;
+            font-weight: 700;
         }
         footer a {
             color: #A9FF8E;
@@ -136,84 +173,192 @@
             background-color: #0E120D;
             padding: 10px;
         }
+        /* Модальное окно */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #0E120D;
+            padding: 20px;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 800px;
+            position: relative;
+            text-align: left;
+        }
+        .modal-content img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 5px;
+            float: left;
+            margin-right: 20px;
+        }
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #A9FF8E;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .modal-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .game-section-blur {
+            filter: blur(5px);
+        }
+        body.modal-open {
+            overflow: hidden; /* Блокировка прокрутки только при открытом модальном окне */
+        }
     </style>
 </head>
 <body>
-    <div class="logo">tokar</div>
-    <nav>
-        <a href="#">падпрымальныя</a>
-        <a href="#">камандныя</a>
-        <a href="#">гульні</a>
-        <a href="#">пераклады</a>
-    </nav>
+    <div class="top-bar">
+        <div class="logo">łokar</div>
+        <nav>
+            <a href="https://www.patreon.com/c/lokar_lak" target="_blank" rel="noopener noreferrer">падтрымаць</a>
+            <a href="#">гульні</a>
+            <a href="#">пераклады</a>
+        </nav>
+    </div>
     <div class="header-container">
-        <div class="header-left">
-            <h1 class="main-title">Беларуская лакалізацыя</h1>
-            <p class="subtitle">tokar — гама каманда, якая займаецца лакалізацыяй гульняў на беларускую мову. Мы перакладаем Stardew Valley, Mouthwashing, і прыбіральныя ўжен перкладзе Heroes of Might and Magic III.</p>
-        </div>
-        <div class="header-right">
-            <span>Час перакладзель <img src="images/avatar.jpg" alt="Avatar"></span>
-            <div class="game-name">Valheim</div>
-            <a href="#" class="game-button">Дадучыцца</a>
+        <div class="header-alignment">
+            <div class="header-left">
+                <h1 class="main-title">Пра нас</h1>
+                <p class="subtitle">Мы — каманда лакізатараў-энтузіастаў і проста аматараў якасных кампутарных гульняў. Мы робім гульні больш даступнымі, і даём адчуць самы смак беларускай у вашых улюбленых праектах.</p>
+            </div>
+            <div class="header-right">
+                <span>Бягучы праект</span>
+                <div class="game-name">Don't Starve Together</div>
+                <a href="https://forms.gle/NWaErzdBpwZfXLNM6" target="_blank" rel="noopener noreferrer" class="game-button">Далучыцца</a>
+            </div>
         </div>
     </div>
-
     <div class="game-section">
         <!-- Прыклад гульні. Каб дадаць новую, скапіюйце гэты блок .game-card і абнавіце выяву, назву, апісанне і спасылку кнопкі -->
-        <div class="game-card">
-            <img src="images/stardewvalley.png" alt="Stardew Valley">
+        <div class="game-card" onclick="openModal('Stardew Valley', 'images/stardewValley_img.png', 'Вы сталі спадкаемцам старой дзялянкі вашага дзеда ў даліне Стардзю. Узброіўшыся базавымі інструментамі і парай манет у кішэні, вы пачынаеце новае жыццё. Ці навучыцеся вы жыць з зямлі-карміліцы і ці стануць гэтыя зарослыя палі вашым новым квітучым домам?')">
+            <img src="images/stardewValley_img.png" alt="Stardew Valley">
             <div class="game-info">
                 <h2 class="game-title">Stardew Valley</h2>
-                <p class="game-desc">Вы смялец, які абраўся ў спадчыну дзяды ў сельскую мясцовасьць. Гэта RPG з элементамі фермы, дзе вы разьвіваеце гаспадарку, зносіцеся з жыхарамі і шукаеце скарбы.</p>
+                <div class="game-platforms">pc · android · клясычны і афіцыйны правапісы</div>
+                <p class="game-desc">Вы сталі спадкаемцам старой дзялянкі вашага дзеда ў даліне Стардзю. Узброіўшыся базавымі інструментамі і парай манет у кішэні, вы пачынаеце новае жыццё. Ці навучыцеся вы жыць з зямлі-карміліцы і ці стануць гэтыя зарослыя палі вашым новым квітучым домам?</p>
+            </div>
+            <div class="button-container">
                 <a href="#" class="game-button">Падрабязней</a>
             </div>
         </div>
-
-        <div class="game-card">
-            <img src="images/mouthwashing.jpg" alt="Mouthwashing">
+        <div class="game-card" onclick="openModal('Mouthwashing', 'images/mouthwashing_img.png', 'Экіпаж з пяцярых асоб на караблі «Тульпар» захрас у пустэльных прасторах космасу, ахутаны бясконцым змрокам. І бог іх не пільнуе.')">
+            <img src="images/mouthwashing_img.png" alt="Mouthwashing">
             <div class="game-info">
                 <h2 class="game-title">Mouthwashing</h2>
-                <p class="game-desc">Гэта жахі з абліччам па ўсяму. Праграмны код, акустычныя эфекты, візуальныя элементы. Гэта для ix не мітне.</p>
+                <div class="game-platforms">pc · афіцыйны правапіс</div>
+                <p class="game-desc">Экіпаж з пяцярых асоб на караблі «Тульпар» захрас у пустэльных прасторах космасу, ахутаны бясконцым змрокам.<br><br>І бог іх не пільнуе.</p>
+            </div>
+            <div class="button-container">
                 <a href="#" class="game-button">Падрабязней</a>
             </div>
         </div>
-
-        <div class="game-card">
-            <img src="images/heroes3.jpg" alt="Heroes of Might & Magic 3">
+        <div class="game-card" onclick="openModal('Heroes of Might & Magic 3', 'images/HOMM3_img.png', 'Пакрокавая стратэгічная гульня, распрацаваная Джонам ван Канэгемам з New World Computing пад Microsoft Windows і выпушчаная The 3DO Company у 1999 годзе. Як вынікае з назвы, гэта трэцяя гульня серыі «Heroes of Might and Magic».')">
+            <img src="images/HOMM3_img.png" alt="Heroes of Might & Magic 3">
             <div class="game-info">
                 <h2 class="game-title">Heroes of Might & Magic 3</h2>
-                <p class="game-desc">Пакрокавая стратэгія з элементамі RPG. Вы зьбіраеце войска, змагаецеся з ворагамі і разьвіваеце гарады. Класіка жанру.</p>
+                <div class="game-platforms">pc · афіцыйны правапіс</div>
+                <p class="game-desc">Пакрокавая стратэгічная гульня, распрацаваная Джонам ван Канэгемам з New World Computing пад Microsoft Windows і выпушчаная The 3DO Company у 1999 годзе. Як вынікае з назвы, гэта трэцяя гульня серыі «Heroes of Might and Magic».</p>
+            </div>
+            <div class="button-container">
                 <a href="#" class="game-button">Падрабязней</a>
             </div>
         </div>
-
-        <div class="game-card">
-            <img src="images/valheim.jpg" alt="Valheim">
+        <div class="game-card" onclick="openModal('Valheim', 'images/valheim_img.png', 'Cімулятар выжывання ў адкрытым свеце, створаны швецкай студыяй Iron Gate Studio і выдадзены кампаніяй Coffee Stain Studios. Гульня выйшла ў ранні доступ 2 лютага 2021 г. для платформ Linux і Steam, а 14 сакавіка 2023 г. для Xbox One і Xbox Series X/S.')">
+            <img src="images/valheim_img.png" alt="Valheim">
             <div class="game-info">
                 <h2 class="game-title">Valheim</h2>
-                <p class="game-desc">Выжыванне ў сьвеце вікінгаў. Будаваньне, змаганьне з монстрамі, даследаваньне. Падтрымка для PC, Xbox і Linux.</p>
+                <div class="game-platforms">pc · афіцыйны правапіс</div>
+                <p class="game-desc">Cімулятар выжывання ў адкрытым свеце, створаны швецкай студыяй Iron Gate Studio і выдадзены кампаніяй Coffee Stain Studios. Гульня выйшла ў ранні доступ 2 лютага 2021 г. для платформ Linux і Steam, а 14 сакавіка 2023 г. для Xbox One і Xbox Series X/S.</p>
+            </div>
+            <div class="button-container">
                 <a href="#" class="game-button">Падрабязней</a>
             </div>
         </div>
     </div>
-
     <footer>
         <div>
-            <h3>падпрымальныя</h3>
-            <a href="#">Patreon</a>
-            <a href="#">Boosty</a>
+            <h3>падтрымаць нас</h3>
+            <a href="https://www.patreon.com/c/lokar_lak" target="_blank" rel="noopener noreferrer">Patreon</a>
+            <a href="https://boosty.to/lokar_lak" target="_blank" rel="noopener noreferrer">Boosty</a>
         </div>
         <div>
-            <h3>гульніцыя</h3>
-            <a href="#">Google Forms</a>
+            <h3>далучыцца</h3>
+            <a href="https://forms.gle/NWaErzdBpwZfXLNM6" target="_blank" rel="noopener noreferrer">Google Forms</a>
         </div>
         <div>
-            <h3>сацыемкі</h3>
-            <a href="#">Twitter</a>
-            <a href="#">Telegram</a>
-            <a href="#">TikTok</a>
+            <h3>нашы сацсеткі</h3>
+            <a href="https://x.com/lokar_lak" target="_blank" rel="noopener noreferrer">Twitter</a>
+            <a href="https://t.me/lokar_lak" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a href="https://discord.com/invite/wCPEK5kFUj" target="_blank" rel="noopener noreferrer">Discord</a>
         </div>
     </footer>
-    <p class="copyright">© 2025 - tokar</p>
+    <p class="copyright">© 2025 - łokar</p>
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content" style="top: 1px;">
+            <span class="modal-close" onclick="closeModal()">×</span>
+            <img id="modal-image" src="" alt="Game Image">
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <div class="modal-buttons">
+                <a href="#" class="game-button" id="modal-download">PC версія</a>
+                <a href="#" class="game-button" id="modal-nexus">Nexus</a>
+                <a href="#" class="game-button" id="modal-mega">Mega</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+<script>
+    function openModal(title, imageSrc, description) {
+        const modal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalImage = document.getElementById('modal-image');
+        const modalDescription = document.getElementById('modal-description');
+        const gameSection = document.querySelector('.game-section');
+        const body = document.body;
+
+        modalTitle.textContent = title;
+        modalImage.src = imageSrc;
+        modalDescription.textContent = description;
+
+        modal.style.display = 'flex';
+        gameSection.classList.add('game-section-blur');
+        body.classList.add('modal-open');
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('modal');
+        const gameSection = document.querySelector('.game-section');
+        const body = document.body;
+
+        modal.style.display = 'none';
+        gameSection.classList.remove('game-section-blur');
+        body.classList.remove('modal-open');
+    }
+
+    // Закрытие модального окна при клике вне его
+    window.onclick = function(event) {
+        const modal = document.getElementById('modal');
+        if (event.target === modal) {
+            closeModal();
+        }
+    }
+</script>
