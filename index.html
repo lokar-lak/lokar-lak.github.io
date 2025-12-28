@@ -156,30 +156,74 @@
       border: 1px solid rgba(255,255,255,0.08);
     }
 
-.modal-side{
-  display:flex;
-  flex-direction:column;
-}
+    .modal-side{
+      flex:1;
+      min-width:320px;
+      display:flex;
+      flex-direction:column;
+    }
+
+    /* Назва + значкі крам */
+    .modal-title-row{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:0 0 10px 0;
+    }
 
     .modal-title{
-      margin:0 0 14px 0;
+      margin:0;
       font-size:28px;
       color:#A9FF8E;
       font-weight:700;
     }
 
-    /* Унутры справа: 2 слупкі (кнопкі + мета) */
-.modal-side-row{
-  display:flex;
-  gap:22px;
-  align-items:flex-start;
-  justify-content:center;     /* галоўнае: цэнтруем групу */
-}
+    .store-icons{
+      display:flex;
+      gap:10px;
+      align-items:center;
+    }
+    .store-icon{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:36px;
+      height:36px;
+      border-radius:12px;
+      border: 1px solid rgba(169,255,142,0.25);
+      background: rgba(0,0,0,0.18);
+      color:#A9FF8E;
+      text-decoration:none;
+      font-weight:700;
+      font-size:12px;
+      line-height:1;
+      transition: transform 0.15s ease, filter 0.15s ease, border-color 0.15s ease;
+      user-select:none;
+    }
+    .store-icon:hover{
+      transform: translateY(-1px);
+      filter: brightness(1.08);
+      border-color: rgba(169,255,142,0.45);
+    }
+    .store-icon:focus{
+      outline:none;
+      box-shadow: 0 0 0 3px rgba(169,255,142,0.18);
+    }
 
-.modal-actions{
-  flex: 0 1 520px;            /* было flex:1; min-width:... */
-  min-width: 340px;
-}
+    /* Унутры справа: 2 слупкі (усталяванне + мета) */
+    .modal-side-row{
+      display:flex;
+      gap:22px;
+      align-items:flex-start;
+      justify-content:center;     /* цэнтруем абодва блокі як групу */
+    }
+
+    /* каб блок з усталяваннем не цягнуўся на ўсю шырыню */
+    .modal-actions{
+      flex:0 1 520px;
+      min-width:340px;
+    }
 
     .modal-screenshots-title{
       color:#A9FF8E;
@@ -201,12 +245,9 @@
       flex-wrap:wrap;
     }
 
-    .modal-stores{ margin-top:18px; }
-    .modal-platforms{ margin-top:2px; }
-
     /* Мета як “бэйджы” */
     .modal-meta{
-        flex: 0 1 360px;  
+      flex:0 1 360px;
       padding:14px;
       border: 1px solid rgba(169,255,142,0.18);
       border-radius:14px;
@@ -214,10 +255,6 @@
     }
 
     .meta-title{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:10px;
       margin:0 0 12px 0;
       color:#A9FF8E;
       font-weight:700;
@@ -276,7 +313,6 @@
 
     /* Скрыншоты: ВЯЛІКАЯ вобласць */
     .modal-screenshots{ margin-top:28px; }
-
     .carousel{ position:relative; }
 
     .modal-screenshot-container{
@@ -331,7 +367,8 @@
       .modal-side{ min-width:unset; }
       .game-img{ width:min(100%, 520px); }
 
-      .modal-side-row{ flex-direction:column; }
+      .modal-side-row{ flex-direction:column; justify-content:flex-start; }
+      .modal-actions{ flex:unset; width:100%; min-width:unset; }
       .modal-meta{ flex:unset; width:100%; }
       .meta-badge .v{ max-width:100%; }
 
@@ -396,46 +433,20 @@
           'images/stardew/27171-1732560547-1540111734.webp'
         ],
         { steam: 'https://store.steampowered.com/app/413150/Stardew_Valley/', gog: 'https://www.gog.com/game/stardew_valley' },
-        { developer: 'ConcernedApe', genre: 'Farming Sim / RPG', translators: 'Аляксандр Міхалеў, Dymniška, Cactusovič', words: '~147.000' }
+        { developer: 'ConcernedApe', genre: 'Farming / RPG', translators: 'łokar', words: '—' }
       )">
       <img src="images/stardewValley_img.png" alt="Stardew Valley">
       <div class="game-info">
         <h2 class="game-title">Stardew Valley</h2>
         <div class="game-platforms">pc · android · клясычны і афіцыйны правапісы</div>
         <p class="game-desc">
-          Вы сталі спадкаемцам старой дзялянкі вашага дзеда ў даліне Стардзю...
+          Вы сталі спадкаемцам старой дзялянкі вашага дзеда ў даліне Стардзю. Узброіўшыся базавымі інструментамі...
         </p>
       </div>
       <div class="button-container"><a href="#" class="game-button">Падрабязней</a></div>
     </div>
 
-    <div class="game-card"
-      onclick="openModal(
-        'Valheim',
-    'images/valheim_img.png',
-    'Cімулятар выжывання ў адкрытым свеце, створаны швецкай студыяй Iron Gate Studio і выдадзены кампаніяй Coffee Stain Studios. Гульня выйшла ў ранні доступ 2 лютага 2021 г. для платформ Linux і Steam, а 14 сакавіка 2023 г. для Xbox One і Xbox Series X/S.',
-    [
-      { platform: 'PC версія', links: [{ text: 'Nexus', url: '#' }, { text: 'Mega', url: '#' }] }
-    ],
-    [
-      'images/valheim_screenshot1.png',
-      'images/valheim_screenshot2.png'
-    ],
-    { steam: 'https://store.steampowered.com/app/892970/Valheim/', gog: null },
-    { developer: 'Iron Gate Studio', genre: 'Выжыванне / Адкрыты сусвет / Супольная гульня', translators: 'Аляксандр Міхалеў, Dymniška, Данік, Kastuś', words: '~30.000' }
-  )">
-      <img src="images/valheim_img.png" alt="Valheim">
-      <div class="game-info">
-        <h2 class="game-title">Valheim</h2>
-        <div class="game-platforms">pc · афіцыйны правапісы</div>
-        <p class="game-desc">
-          Cімулятар выжывання ў адкрытым свеце, створаны швецкай студыяй Iron Gate Studio і выдадзены кампаніяй Coffee Stain Studios. Гульня выйшла ў ранні доступ 2 лютага 2021 г. для платформ Linux і Steam, а 14 сакавіка 2023 г. для Xbox One і Xbox Series X/S.
-        </p>
-      </div>
-      <div class="button-container"><a href="#" class="game-button">Падрабязней</a></div>
-    </div>
-
-    <!-- Mouthwashing (прыклад) -->
+    <!-- Mouthwashing -->
     <div class="game-card"
       onclick="openModal(
         'Mouthwashing',
@@ -444,14 +455,10 @@
         [
           { platform: 'PC версія', links: [{ text: 'Nexus', url: '#' }, { text: 'Mega', url: '#' }] }
         ],
-        ['images/mouthwashing/5-1738857539-1821796376.webp',
-        'images/mouthwashing/5-1738857552-1271356023.webp',
-        'images/mouthwashing/5-1738857561-1707518091.webp',
-        'images/mouthwashing/5-1738857571-1831959246.webp',
-        'images/mouthwashing/5-1738857592-519947450.webp',
-        'images/mouthwashing/5-1738857656-1426923202.webp',
-        'images/mouthwashing/5-1738857665-170199798.webp'
-],
+        [
+          'images/mouthwashing_screenshot1.webp',
+          'images/mouthwashing_screenshot2.webp'
+        ],
         { steam: null, gog: null },
         { developer: '—', genre: '—', translators: '—', words: '—' }
       )">
@@ -459,13 +466,67 @@
       <div class="game-info">
         <h2 class="game-title">Mouthwashing</h2>
         <div class="game-platforms">pc · афіцыйны правапіс</div>
-        <p class="game-desc">Экіпаж з пяцярых асоб...<br><br>І бог іх не пільнуе.</p>
+        <p class="game-desc">
+          Экіпаж з пяцярых асоб на караблі «Тульпар» захрас у пустэльных прасторах космасу, ахутаны бясконцым змрокам.<br><br>І бог іх не пільнуе.
+        </p>
+      </div>
+      <div class="button-container"><a href="#" class="game-button">Падрабязней</a></div>
+    </div>
+
+    <!-- Heroes of Might & Magic 3 -->
+    <div class="game-card"
+      onclick="openModal(
+        'Heroes of Might &amp; Magic 3',
+        'images/HOMM3_img.png',
+        'Пакрокавая стратэгічная гульня, распрацаваная Джонам ван Канэгемам з New World Computing пад Microsoft Windows і выпушчаная The 3DO Company у 1999 годзе. Як вынікае з назвы, гэта трэцяя гульня серыі «Heroes of Might and Magic».',
+        [
+          { platform: 'PC версія', links: [{ text: 'Nexus', url: '#' }, { text: 'Mega', url: '#' }] }
+        ],
+        [
+          'images/homm3_screenshot1.png',
+          'images/homm3_screenshot2.png'
+        ],
+        { steam: null, gog: null },
+        { developer: 'New World Computing', genre: 'Пакрокавая стратэгія', translators: '—', words: '—' }
+      )">
+      <img src="images/HOMM3_img.png" alt="Heroes of Might & Magic 3">
+      <div class="game-info">
+        <h2 class="game-title">Heroes of Might & Magic 3</h2>
+        <div class="game-platforms">pc · афіцыйны правапіс</div>
+        <p class="game-desc">
+          Пакрокавая стратэгічная гульня, распрацаваная Джонам ван Канэгемам з New World Computing пад Microsoft Windows і выпушчаная The 3DO Company у 1999 годзе...
+        </p>
+      </div>
+      <div class="button-container"><a href="#" class="game-button">Падрабязней</a></div>
+    </div>
+
+    <!-- Valheim -->
+    <div class="game-card"
+      onclick="openModal(
+        'Valheim',
+        'images/valheim_img.png',
+        'Cімулятар выжывання ў адкрытым свеце, створаны швецкай студыяй Iron Gate Studio і выдадзены кампаніяй Coffee Stain Studios. Гульня выйшла ў ранні доступ 2 лютага 2021 г. для платформ Linux і Steam, а 14 сакавіка 2023 г. для Xbox One і Xbox Series X/S.',
+        [
+          { platform: 'PC версія', links: [{ text: 'Nexus', url: '#' }, { text: 'Mega', url: '#' }] }
+        ],
+        [
+          'images/valheim_screenshot1.png',
+          'images/valheim_screenshot2.png'
+        ],
+        { steam: 'https://store.steampowered.com/app/892970/Valheim/', gog: null },
+        { developer: 'Iron Gate Studio', genre: 'Survival / Open World', translators: '—', words: '—' }
+      )">
+      <img src="images/valheim_img.png" alt="Valheim">
+      <div class="game-info">
+        <h2 class="game-title">Valheim</h2>
+        <div class="game-platforms">pc · афіцыйны правапіс</div>
+        <p class="game-desc">
+          Cімулятар выжывання ў адкрытым свеце, створаны швецкай студыяй Iron Gate Studio і выдадзены кампаніяй Coffee Stain Studios...
+        </p>
       </div>
       <div class="button-container"><a href="#" class="game-button">Падрабязней</a></div>
     </div>
   </div>
-
-  
 
   <footer>
     <div>
@@ -496,18 +557,16 @@
         <img id="modal-image" class="game-img" src="" alt="Game Image">
 
         <div class="modal-side">
-          <h2 id="modal-title" class="modal-title"></h2>
+          <div class="modal-title-row">
+            <h2 id="modal-title" class="modal-title"></h2>
+            <div id="modal-store-icons" class="store-icons" aria-label="Крамы"></div>
+          </div>
 
           <div class="modal-side-row">
-            <!-- Кнопкі -->
+            <!-- Усталяванне -->
             <div class="modal-actions">
               <div id="modal-platforms" class="modal-platforms">
                 <h3 class="modal-screenshots-title">Файлы для спампоўвання</h3>
-              </div>
-
-              <div id="modal-stores" class="modal-stores">
-                <h3 class="modal-screenshots-title">Крамы</h3>
-                <div id="modal-stores-buttons" class="modal-download-buttons"></div>
               </div>
             </div>
 
@@ -524,7 +583,7 @@
       <p id="modal-description" class="modal-description"></p>
 
       <div id="modal-screenshots" class="modal-screenshots">
-        <h3 class="modal-screenshots-title">Скрыншоты</h3>
+        <h3 class="modal-screenshots-title">скрыншоты</h3>
         <div class="carousel">
           <button type="button" class="prev" onclick="scrollCarousel(-1)" aria-label="Папярэдні скрыншот">&lt;</button>
           <div id="screenshot-container" class="modal-screenshot-container"></div>
@@ -542,14 +601,14 @@
     const modalImage = document.getElementById('modal-image');
     const modalDescription = document.getElementById('modal-description');
     const modalPlatforms = document.getElementById('modal-platforms');
+    const modalScreenshots = document.getElementById('modal-screenshots');
     const screenshotContainer = document.getElementById('screenshot-container');
-    const gameSection = document.querySelector('.game-section');
-    const body = document.body;
-
-    const storesBox = document.getElementById('modal-stores');
-    const storesButtons = document.getElementById('modal-stores-buttons');
+    const storeIconsEl = document.getElementById('modal-store-icons');
 
     const metaGrid = document.getElementById('meta-grid');
+
+    const gameSection = document.querySelector('.game-section');
+    const body = document.body;
 
     // не скакаць на # пры кліку на "Падрабязней"
     document.querySelectorAll('.game-card a.game-button').forEach(a => {
@@ -575,14 +634,43 @@
       debounceTimer = setTimeout(updateActiveScreenshot, 80);
     }, { passive: true });
 
+    function renderStoreIcons(stores) {
+      storeIconsEl.innerHTML = '';
+
+      const entries = [
+        { label: 'Steam', short: 'S', url: stores?.steam || null },
+        { label: 'GOG',   short: 'G', url: stores?.gog   || null },
+      ].filter(x => x.url);
+
+      if (entries.length === 0) {
+        storeIconsEl.style.display = 'none';
+        return;
+      }
+
+      storeIconsEl.style.display = 'flex';
+
+      entries.forEach(item => {
+        const a = document.createElement('a');
+        a.className = 'store-icon';
+        a.href = item.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.title = item.label;
+        a.setAttribute('aria-label', item.label);
+
+        a.textContent = item.short;
+        storeIconsEl.appendChild(a);
+      });
+    }
+
     function renderMetaBadges(meta) {
       metaGrid.innerHTML = '';
 
       const items = [
-        { key: 'Распрацоўшчык:', value: meta?.developer ?? '—' },
-        { key: 'Жанр:', value: meta?.genre ?? '—' },
-        { key: 'Аўтары:', value: meta?.translators ?? '—' },
-        { key: 'Колкасць слоў:', value: meta?.words ?? '—', cls: 'words' },
+        { key: 'Распрацоўшчык', value: meta?.developer ?? '—' },
+        { key: 'Жанр', value: meta?.genre ?? '—' },
+        { key: 'Аўтары', value: meta?.translators ?? '—' },
+        { key: 'Слоў', value: meta?.words ?? '—', cls: 'words' },
       ];
 
       items.forEach(item => {
@@ -607,12 +695,14 @@
       // reset
       modalPlatforms.innerHTML = '<h3 class="modal-screenshots-title">Файлы для спампоўвання</h3>';
       screenshotContainer.innerHTML = '';
-      storesButtons.innerHTML = '';
       metaGrid.innerHTML = '';
 
       modalTitle.textContent = title;
       modalImage.src = imageSrc;
       modalDescription.innerHTML = description;
+
+      renderStoreIcons(stores || {});
+      renderMetaBadges(meta || {});
 
       // platforms
       (platforms || []).forEach(platform => {
@@ -640,41 +730,10 @@
         modalPlatforms.appendChild(platformDiv);
       });
 
-      // stores (без "схаваць")
-      const steamUrl = stores?.steam || null;
-      const gogUrl = stores?.gog || null;
-
-      if (!steamUrl && !gogUrl) {
-        storesBox.style.display = 'none';
-      } else {
-        storesBox.style.display = 'block';
-
-        if (steamUrl) {
-          const a = document.createElement('a');
-          a.href = steamUrl;
-          a.classList.add('game-button');
-          a.textContent = 'Steam';
-          a.target = "_blank";
-          a.rel = "noopener noreferrer";
-          storesButtons.appendChild(a);
-        }
-
-        if (gogUrl) {
-          const a = document.createElement('a');
-          a.href = gogUrl;
-          a.classList.add('game-button');
-          a.textContent = 'GOG';
-          a.target = "_blank";
-          a.rel = "noopener noreferrer";
-          storesButtons.appendChild(a);
-        }
-      }
-
-      // meta badges
-      renderMetaBadges(meta || {});
-
       // screenshots
       if (Array.isArray(screenshots) && screenshots.length > 0) {
+        modalScreenshots.style.display = 'block';
+
         screenshots.forEach(src => {
           const img = document.createElement('img');
           img.src = src;
@@ -687,13 +746,14 @@
           screenshotContainer.appendChild(img);
         });
 
-        // пасля рэндэрынгу: цэнтруем сярэдні
         requestAnimationFrame(() => {
           const imgs = getImages();
           const mid = Math.floor(imgs.length / 2);
           centerOnIndex(mid, false);
           updateActiveScreenshot();
         });
+      } else {
+        modalScreenshots.style.display = 'none';
       }
 
       modal.style.display = 'flex';
@@ -764,7 +824,6 @@
       return { img: imgs[bestIdx], index: bestIdx };
     }
 
-    // стрэлкі: выбіраем бліжэйшы да цэнтра і пераходзім на наступны/папярэдні
     function scrollCarousel(dir) {
       const imgs = getImages();
       if (!imgs.length) return;
