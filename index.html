@@ -6,9 +6,9 @@
   <title>łokar</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#111111">
 
@@ -632,6 +632,7 @@
     const GAMES = [
       {
         id: "stardew",
+        pageUrl: "games/stardew-valley.html",
         title: "Stardew Valley",
         cover: "images/stardewValley_img.png",
         cardPlatforms: "pc · android · клясычны і афіцыйны правапісы",
@@ -671,6 +672,7 @@
 
       {
         id: "mouthwashing",
+        pageUrl: "games/mouthwashing.html",
         title: "Mouthwashing",
         cover: "images/mouthwashing_img.png",
         cardPlatforms: "pc · афіцыйны правапіс",
@@ -699,6 +701,7 @@
 
       {
         id: "homm3",
+        pageUrl: "games/homm3.html",
         title: "Heroes of Might & Magic 3",
         cover: "images/HOMM3_img.png",
         cardPlatforms: "pc · афіцыйны правапіс",
@@ -726,6 +729,7 @@
 
       {
         id: "valheim",
+        pageUrl: "games/valheim.html",
         title: "Valheim",
         cover: "images/valheim_img.png",
         cardPlatforms: "pc · афіцыйны правапіс",
@@ -759,6 +763,13 @@
       const card = document.createElement('div');
       card.className = 'game-card';
       card.addEventListener('click', () => openGameModal(game));
+
+      const pageLink = document.createElement('a');
+      pageLink.href = game.pageUrl;
+      pageLink.className = 'game-button';
+      pageLink.textContent = 'Старонка';
+      pageLink.addEventListener('click', (e) => e.stopPropagation()); // каб не адкрывала модалку
+      btnWrap.appendChild(pageLink);
 
       const img = document.createElement('img');
       img.src = game.cover;
