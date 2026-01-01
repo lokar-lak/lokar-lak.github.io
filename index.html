@@ -764,13 +764,6 @@
       card.className = 'game-card';
       card.addEventListener('click', () => openGameModal(game));
 
-      const pageLink = document.createElement('a');
-      pageLink.href = game.pageUrl;
-      pageLink.className = 'game-button';
-      pageLink.textContent = 'Старонка';
-      pageLink.addEventListener('click', (e) => e.stopPropagation()); // каб не адкрывала модалку
-      btnWrap.appendChild(pageLink);
-
       const img = document.createElement('img');
       img.src = game.cover;
       img.alt = game.title;
