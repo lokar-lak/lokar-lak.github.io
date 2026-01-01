@@ -4,16 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>łokar</title>
+
+  <!-- Favicon -->
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#111111">
 
-
   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap" rel="stylesheet">
 
   <style>
+    /* ВАЖНА: здымае 90% праблем з “вылазіць за экран” */
+    *, *::before, *::after{ box-sizing: border-box; }
+
     body{
       background-color:#111111;
       color:#eeeeee;
@@ -136,6 +140,28 @@
       border: 1px solid rgba(255,255,255,0.06);
     }
 
+    /* Кнопка закрыцця (fixed, заўсёды зверху) */
+    .modal-x{
+      position: fixed;
+      top: calc(10px + env(safe-area-inset-top));
+      right: calc(10px + env(safe-area-inset-right));
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      border: 1px solid rgba(169,255,142,0.35);
+      background: rgba(0,0,0,0.35);
+      color: #A9FF8E;
+      font-size: 26px;
+      line-height: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 2000;
+      user-select: none;
+    }
+    .modal-x:active{ transform: scale(0.98); }
+
     .modal-top{
       display:flex;
       align-items:flex-start;
@@ -148,6 +174,7 @@
       border-radius:14px;
       flex:0 0 auto;
       border: 1px solid rgba(255,255,255,0.08);
+      display:block;
     }
 
     .modal-side{
@@ -157,7 +184,6 @@
       flex-direction:column;
     }
 
-    /* "Файлы..." пад загалоўкам, meta справа на той жа вышыні */
     .modal-main-row{
       display:flex;
       gap:22px;
@@ -172,7 +198,6 @@
       min-width:280px;
     }
 
-    /* Назва + значкі */
     .modal-title-row{
       display:flex;
       align-items:center;
@@ -226,7 +251,6 @@
       border-color: rgba(169,255,142,0.45);
     }
 
-    /* Файлы */
     .modal-actions{
       width:100%;
       max-width:520px;
@@ -252,7 +276,6 @@
       flex-wrap:wrap;
     }
 
-    /* ======= META: пашыраецца і ПЕРАНОСІЦЬ ТЭКСТ замест трох кропак ======= */
     .modal-meta{
       flex:0 0 360px;
       padding:14px;
@@ -269,60 +292,54 @@
       font-size:16px;
     }
 
-    /* Замест “мноства чыпаў у радках” — робім акуратна ў слупок,
-       каб доўгія значэнні (аўтары) не абрэзаліся і не цясніліся. */
     .meta-grid{
       display:flex;
       flex-direction:column;
       gap:10px;
     }
 
-  .meta-badge{
-    display:flex;
-    align-items: baseline;      /* галоўнае: выраўноўванне па базавай лініі */
-    gap:10px;
-    padding:10px 12px;
-    border-radius:14px;
-    border: 1px solid rgba(169,255,142,0.25);
-    background: rgba(0,0,0,0.18);
-    width:100%;
-    box-sizing:border-box;
-  }
+    .meta-badge{
+      display:flex;
+      align-items: baseline;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:14px;
+      border: 1px solid rgba(169,255,142,0.25);
+      background: rgba(0,0,0,0.18);
+      width:100%;
+    }
 
- .meta-badge .k{
-  color:#A9FF8E;
-  font-weight:800;
-  font-size:11px;
-  letter-spacing:0.06em;
-  text-transform:uppercase;
-  white-space:nowrap;
-  opacity:0.95;
-  line-height: 1.35;          /* каб супала з .v */
-  flex:0 0 auto;
-}
+    .meta-badge .k{
+      color:#A9FF8E;
+      font-weight:800;
+      font-size:11px;
+      letter-spacing:0.06em;
+      text-transform:uppercase;
+      white-space:nowrap;
+      opacity:0.95;
+      line-height: 1.35;
+      flex:0 0 auto;
+    }
 
-.meta-badge .v{
-  color:#eeeeee;
-  font-weight:700;
-  font-size:13px;
+    .meta-badge .v{
+      color:#eeeeee;
+      font-weight:700;
+      font-size:13px;
+      white-space:normal;
+      overflow:visible;
+      text-overflow:clip;
+      max-width:none;
+      flex:1 1 auto;
+      min-width:0;
+      word-break:break-word;
+      line-height: 1.35;
+    }
 
-  white-space:normal;
-  overflow:visible;
-  text-overflow:clip;
-  max-width:none;
-
-  flex:1 1 auto;
-  min-width:0;
-  word-break:break-word;
-
-  line-height: 1.35;          /* каб базавыя лініі супалі */
-}
     .meta-badge.words .v{
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
       letter-spacing:0.02em;
     }
 
-    /* Апісанне */
     .modal-description{
       margin:10px 0 0 0;
       font-size:16px;
@@ -331,7 +348,6 @@
       max-width:1100px;
     }
 
-    /* Скрыншоты */
     .modal-screenshots{ margin-top:28px; }
     .carousel{ position:relative; }
 
@@ -383,49 +399,124 @@
 
     /* ГЛАБАЛЬНА: усё крыху большае */
     html{ font-size:18px; }
-
     .top-bar{ font-size:1.05rem; }
     .logo{ font-size:2rem; }
     .main-title{ font-size:3rem; }
     .subtitle{ font-size:1rem; }
-
     .game-title{ font-size:1.5rem; }
     .game-desc{ font-size:1rem; }
     .game-platforms{ font-size:0.85rem; }
-
     .game-button{ font-size:0.95rem; padding:10px 18px; }
-
     .modal-title{ font-size:1.75rem; }
     .modal-screenshots-title{ font-size:1.15rem; }
     .modal-platform-title{ font-size:1.05rem; }
     .modal-description{ font-size:1.05rem; }
     .meta-title{ font-size:1.05rem; }
-
     .meta-badge .k{ font-size:0.72rem; }
     .meta-badge .v{ font-size:0.95rem; }
 
+    /* ===== MOBILE ===== */
     @media (max-width: 980px){
-      .modal-top{ flex-direction:column; }
-      .modal-side{ min-width:unset; }
-      .game-img{ width:min(100%, 520px); }
+      /* header: current project first */
+      .header-alignment{
+        flex-direction: column;
+        align-items: stretch;
+        width: 92%;
+        padding: 18px;
+        margin: 10px auto;
+        gap: 14px;
+      }
+      .header-right{ order: 1; margin: 0; text-align: left; }
+      .header-left{ order: 2; }
+      .header-right .game-name{ text-align: left; }
+
+      .top-bar{
+        padding: 14px;
+        margin-right: 0;
+      }
+      .logo{ margin-left: 14px; }
+
+      /* cards */
+      .game-card{
+        width: 92%;
+        padding: 16px;
+        gap: 14px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .game-card img{
+        width: 100%;
+        max-width: 520px;
+      }
+      .button-container{
+        margin-left: 0;
+        align-self: flex-start;
+      }
+
+      /* modal full screen */
+      .modal{
+        padding: 0;
+        align-items: stretch;
+      }
+
+      .modal-content{
+        width: 100%;
+        max-width: 100%;
+        max-height: 100vh;
+        border-radius: 0;
+        padding: 0;              /* каб вокладка была full-width */
+        overflow-x: hidden;
+      }
+
+      /* ДАЕ ВОДСТУП ДА КАНТЭНТУ (больш, чым раней) */
+      .modal-inner{
+        padding:
+          calc(22px + env(safe-area-inset-top))
+          calc(20px + env(safe-area-inset-right))
+          calc(26px + env(safe-area-inset-bottom))
+          calc(20px + env(safe-area-inset-left));
+      }
+
+      /* вокладка full-width */
+      .game-img{
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+      }
+
+      .modal-top{
+        display:block;
+      }
 
       .modal-main-row{
-        flex-direction:column;
-        align-items:flex-start;
+        flex-direction: column;
+        gap: 14px;
+        align-items: stretch;
       }
+
+      .modal-title{ font-size: 1.45rem; }
+
       .modal-meta{
-        width:100%;
-        flex:unset;
+        width: 100%;
+        flex: unset;
       }
+
       .modal-actions{
-        max-width:none;
+        max-width: none;
+        width: 100%;
+      }
+
+      .modal-screenshot-container{
+        padding: 12px 56px;
+        gap: 12px;
       }
 
       .modal-screenshot{
-        width:clamp(280px, 78vw, 620px);
-        height:320px;
+        width: 86vw;
+        max-width: 560px;
+        height: 260px;
       }
-      .modal-screenshot-container{ padding:16px 70px; }
     }
   </style>
 </head>
@@ -478,44 +569,51 @@
 
   <p class="copyright">© 2025 - łokar</p>
 
-  <!-- MODAL (без крыжыка; закрыццё: клік па фоне або Esc) -->
+  <!-- MODAL -->
   <div id="modal" class="modal" aria-hidden="true">
     <div class="modal-content">
-      <div class="modal-top">
-        <img id="modal-image" class="game-img" src="" alt="Game Image">
+      <!-- fixed close -->
+      <button class="modal-x" type="button" aria-label="Закрыць" onclick="closeModal()">×</button>
 
-        <div class="modal-side">
-          <div class="modal-main-row">
-            <div class="modal-left">
-              <div class="modal-title-row">
-                <h2 id="modal-title" class="modal-title"></h2>
-                <div id="modal-icons" class="modal-icons" aria-label="Значкі крам і платформ"></div>
-              </div>
+      <!-- cover full width on mobile (still ok on desktop) -->
+      <img id="modal-image" class="game-img" src="" alt="Game Image">
 
-              <div class="modal-actions">
-                <div id="modal-platforms" class="modal-platforms">
-                  <h3 class="modal-screenshots-title">Файлы для спампоўвання</h3>
+      <!-- padded content (mobile uses bigger padding via .modal-inner) -->
+      <div class="modal-inner">
+        <div class="modal-top">
+          <div class="modal-side">
+            <div class="modal-main-row">
+              <div class="modal-left">
+                <div class="modal-title-row">
+                  <h2 id="modal-title" class="modal-title"></h2>
+                  <div id="modal-icons" class="modal-icons" aria-label="Значкі крам і платформ"></div>
+                </div>
+
+                <div class="modal-actions">
+                  <div id="modal-platforms" class="modal-platforms">
+                    <h3 class="modal-screenshots-title">Файлы для спампоўвання</h3>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="modal-meta">
-              <div class="meta-title">Інфармацыя</div>
-              <div id="meta-grid" class="meta-grid"></div>
+              <div class="modal-meta">
+                <div class="meta-title">Інфармацыя</div>
+                <div id="meta-grid" class="meta-grid"></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <h3 class="modal-screenshots-title" style="margin-top:18px;">Апісанне</h3>
-      <p id="modal-description" class="modal-description"></p>
+        <h3 class="modal-screenshots-title" style="margin-top:18px;">Апісанне</h3>
+        <p id="modal-description" class="modal-description"></p>
 
-      <div id="modal-screenshots" class="modal-screenshots">
-        <h3 class="modal-screenshots-title">Скрыншоты</h3>
-        <div class="carousel">
-          <button type="button" class="prev" onclick="scrollCarousel(-1)" aria-label="Папярэдні скрыншот">&lt;</button>
-          <div id="screenshot-container" class="modal-screenshot-container"></div>
-          <button type="button" class="next" onclick="scrollCarousel(1)" aria-label="Наступны скрыншот">&gt;</button>
+        <div id="modal-screenshots" class="modal-screenshots">
+          <h3 class="modal-screenshots-title">Скрыншоты</h3>
+          <div class="carousel">
+            <button type="button" class="prev" onclick="scrollCarousel(-1)" aria-label="Папярэдні скрыншот">&lt;</button>
+            <div id="screenshot-container" class="modal-screenshot-container"></div>
+            <button type="button" class="next" onclick="scrollCarousel(1)" aria-label="Наступны скрыншот">&gt;</button>
+          </div>
         </div>
       </div>
     </div>
@@ -531,8 +629,15 @@
         cardDescription: "Вы сталі спадкаемцам старой дзялянкі вашага дзеда ў даліне Стардзю. Узброіўшыся базавымі інструментамі і парай манет у кішэні, вы пачынаеце новае жыццё. Ці навучыцеся вы жыць з зямлі-карміліцы і ці стануць гэтыя зарослыя палі вашым новым квітучым домам?",
         description: "Вы сталі спадкаемцам старой дзялянкі вашага дзеда ў даліне Стардзю. Узброіўшыся базавымі інструментамі і парай манет у кішэні, вы пачынаеце новае жыццё. Ці навучыцеся вы жыць з зямлі-карміліцы і ці стануць гэтыя зарослыя палі вашым новым квітучым домам?",
         downloads: [
-          { platform: "PC версія", links: [{ text: "Nexus", url: "https://www.nexusmods.com/stardewvalley/mods/27171?tab=files" }, { text: "Mega", url: "https://mega.nz/folder/C2higIIC#iAwKE4OBRBG7QQlGLjmKyg" }, { text: "CurseForge", url: "https://www.curseforge.com/stardewvalley/mods/bielarusizatar-stardew-valley-belarusian" }] },
-          { platform: "Android версія", links: [{ text: "Nexus", url: "https://www.nexusmods.com/stardewvalley/mods/27171?tab=files" }, { text: "Mega", url: "https://mega.nz/folder/LuwHVQyB#GOsLjoFvrYdbW-slKhz11w" }] }
+          { platform: "PC версія", links: [
+            { text: "Nexus", url: "https://www.nexusmods.com/stardewvalley/mods/27171?tab=files" },
+            { text: "Mega", url: "https://mega.nz/folder/C2higIIC#iAwKE4OBRBG7QQlGLjmKyg" },
+            { text: "CurseForge", url: "https://www.curseforge.com/stardewvalley/mods/bielarusizatar-stardew-valley-belarusian" }
+          ]},
+          { platform: "Android версія", links: [
+            { text: "Nexus", url: "https://www.nexusmods.com/stardewvalley/mods/27171?tab=files" },
+            { text: "Mega", url: "https://mega.nz/folder/LuwHVQyB#GOsLjoFvrYdbW-slKhz11w" }
+          ]}
         ],
         screenshots: [
           "images/stardew/27171-1724275394-18024899.webp",
@@ -550,7 +655,7 @@
           { alt: "Steam", img: "images/icons/steam-svgrepo-com.svg", url: "https://store.steampowered.com/app/413150/Stardew_Valley/" },
           { alt: "GOG", img: "images/icons/gog_galaxy_alt_macos_bigsur_icon_190150-1908176498.png", url: "https://www.gog.com/game/stardew_valley" },
           { alt: "Google Play", img: "images/icons/google-play-icon-svgrepo-com.svg", url: "https://play.google.com/store/apps/details?id=com.chucklefish.stardewvalley&hl=pl&pli=1"},
-          { alt: "Xbox", img: "images/icons/xbox-svgrepo-com.svg", url :"https://www.xbox.com/pl-pl/games/store/stardew-valley/c3d891z6tnqm"},
+          { alt: "Xbox", img: "images/icons/xbox-svgrepo-com.svg", url :"https://www.xbox.com/pl-pl/games/store/stardew-valley/c3d891z6tnqm"}
         ],
         meta: { developer: "ConcernedApe", genre: "Сімулятар / РПГ / Фэнтэзі", translators: "Ueschar, Dymniška, Cactusovič", words: "~178.000" }
       },
@@ -563,7 +668,10 @@
         cardDescription: "Экіпаж з пяцярых асоб на караблі «Тульпар» захрас у пустэльных прасторах космасу, ахутаны бясконцым змрокам.<br><br>І бог іх не пільнуе.",
         description: "Экіпаж з пяцярых асоб на караблі «Тульпар» захрас у пустэльных прасторах космасу, ахутаны бясконцым змрокам.<br><br>І бог іх не пільнуе.",
         downloads: [
-          { platform: "PC версія", links: [{ text: "Nexus", url: "https://www.nexusmods.com/mouthwashing/mods/5/" }, { text: "Mega", url: "https://mega.nz/file/BQhTzJ4Q#HvuVLT-vzT8r38vFKT8pzwl0-MO7DjDDu_zFi5U9JY0" }] }
+          { platform: "PC версія", links: [
+            { text: "Nexus", url: "https://www.nexusmods.com/mouthwashing/mods/5/" },
+            { text: "Mega", url: "https://mega.nz/file/BQhTzJ4Q#HvuVLT-vzT8r38vFKT8pzwl0-MO7DjDDu_zFi5U9JY0" }
+          ]}
         ],
         screenshots: [
           "images/mouthwashing/5-1738857539-1821796376.webp",
@@ -572,7 +680,7 @@
           "images/mouthwashing/5-1738857571-1831959246.webp",
           "images/mouthwashing/5-1738857592-519947450.webp",
           "images/mouthwashing/5-1738857656-1426923202.webp",
-          "images/mouthwashing/5-1738857665-170199798.webp",
+          "images/mouthwashing/5-1738857665-170199798.webp"
         ],
         icons: [
           { alt: "Steam", img: "images/icons/steam-svgrepo-com.svg", url: "https://store.steampowered.com/app/2475490/Mouthwashing/"}
@@ -588,7 +696,9 @@
         cardDescription: "Самая папулярная гульня серыі герояў усіх часоў! Адкрыйце для сябе эпічную гісторыю каралевы Кацярыны Жалезны Кулак, якая распачынае свой выўваляльны паход, каб аб’яднаць спустошаную радзіму і зноў адваяваць каралеўства Эрафію.",
         description: "Самая папулярная гульня серыі герояў усіх часоў! Адкрыйце для сябе эпічную гісторыю каралевы Кацярыны Жалезны Кулак, якая распачынае свой выўваляльны паход, каб аб’яднаць спустошаную радзіму і зноў адваяваць каралеўства Эрафію.",
         downloads: [
-          { platform: "PC версія", links: [{ text: "Сайт", url: "https://heroes.by-reservation.com/spampavac/" }] }
+          { platform: "PC версія", links: [
+            { text: "Сайт", url: "https://heroes.by-reservation.com/spampavac/" }
+          ]}
         ],
         screenshots: [
           "images/homm3/homm3-20250318-1.jpg",
@@ -596,7 +706,7 @@
           "images/homm3/homm3-20250318-3.jpg",
           "images/homm3/homm3-20250318-4.jpg",
           "images/homm3/homm3-20250318-5.jpg",
-          "images/homm3/homm3-20250318-6.jpg",
+          "images/homm3/homm3-20250318-6.jpg"
         ],
         icons: [
           { alt: "GOG", img: "images/icons/gog_galaxy_alt_macos_bigsur_icon_190150-1908176498.png", url: "https://www.gog.com/pl/game/heroes_of_might_and_magic_3_complete_edition"},
@@ -613,7 +723,11 @@
         cardDescription: "Жорсткая гульня пра даследаванне і выжыванне для 1–10 гульцоў, дзеянне якой адбываецца ў працэдурна згенераваным чыстцы, натхнёным культурай вікінгаў. Змагайся, будуй і заваёўвай — пракладай сабе шлях да сагі, годнай апекі Одына!",
         description: "Жорсткая гульня пра даследаванне і выжыванне для 1–10 гульцоў, дзеянне якой адбываецца ў працэдурна згенераваным чыстцы, натхнёным культурай вікінгаў. Змагайся, будуй і заваёўвай — пракладай сабе шлях да сагі, годнай апекі Одына!",
         downloads: [
-          { platform: "PC версія", links: [{ text: "Nexus", url: "https://www.nexusmods.com/valheim/mods/3055" }, { text: "Thunderstore", url: "https://thunderstore.io/c/valheim/p/lokar/Bielarusizatar_Valheim_Belarusian_Translation/" },{ text: "Mega", url: "https://mega.nz/folder/GiBBTIRa#9gtGmuapCbm4S_IwucE4XQ" }] }
+          { platform: "PC версія", links: [
+            { text: "Nexus", url: "https://www.nexusmods.com/valheim/mods/3055" },
+            { text: "Thunderstore", url: "https://thunderstore.io/c/valheim/p/lokar/Bielarusizatar_Valheim_Belarusian_Translation/" },
+            { text: "Mega", url: "https://mega.nz/folder/GiBBTIRa#9gtGmuapCbm4S_IwucE4XQ" }
+          ]}
         ],
         screenshots: [
           "images/valheim/3055-1747002614-114613899.webp",
@@ -697,12 +811,12 @@
     const metaGrid = document.getElementById('meta-grid');
     const body = document.body;
 
-    // закрыць па кліку на фон
+    // close on backdrop
     modal.addEventListener('click', (e) => {
       if (e.target === modal) closeModal();
     });
 
-    // Esc + стрэлкі
+    // Esc + arrows
     document.addEventListener('keydown', (e) => {
       if (modal.style.display !== 'flex') return;
       if (e.key === 'Escape') closeModal();
@@ -710,7 +824,7 @@
       if (e.key === 'ArrowRight') scrollCarousel(1);
     });
 
-    // scroll listener
+    // scroll listener for active screenshot
     screenshotContainer.addEventListener('scroll', () => {
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(updateActiveScreenshot, 80);
