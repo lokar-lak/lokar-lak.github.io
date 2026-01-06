@@ -1,0 +1,40 @@
+{
+  "lang": { "short": "PL" },
+  "nav": {
+    "support": "Wesprzyj"
+  },
+  "header": {
+    "aboutTitle": "O nas",
+    "aboutText": "Jesteśmy zespołem entuzjastów lokalizacji i fanów wysokiej jakości gier komputerowych.\nZ nami granie w języku ojczystym staje się bardziej dostępne — a Ty możesz poczuć prawdziwy smak białoruskiego w swoich ulubionych projektach.",
+    "currentLabel": "Aktualny projekt",
+    "currentProjectName": "Don't Starve Together",
+    "join": "Dołącz"
+  },
+  "footer": {
+    "supportTitle": "Wesprzyj nas",
+    "joinTitle": "Dołącz",
+    "socialTitle": "Nasze social media",
+    "copyright": "© 2025 - łokar"
+  },
+  "modal": {
+    "downloads": "Pliki do pobrania",
+    "info": "Informacje",
+    "description": "Opis",
+    "screens": "Zrzuty ekranu",
+    "prev": "Poprzedni zrzut ekranu",
+    "next": "Następny zrzut ekranu",
+    "close": "Zamknij"
+  },
+  "cards": {
+    "more": "Szczegóły"
+  },
+  "metaLabels": {
+    "developer": "Twórca:",
+    "genre": "Gatunek:",
+    "authors": "Autorzy:",
+    "words": "Liczba słów:"
+  },
+  "common": {
+    "dash": "—"
+  }
+}
