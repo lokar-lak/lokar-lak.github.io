@@ -1,0 +1,38 @@
+{
+  "lang": { "short": "EN" },
+  "nav": {
+    "support": "Support"
+  },
+  "header": {
+    "aboutTitle": "About us",
+    "aboutText": "We are a team of localization enthusiasts and fans of quality PC games.\nWith us, gaming in your native language becomes more accessible — and you can feel the real flavor of Belarusian in your favorite projects.",
+    "currentLabel": "Current project",
+    "currentProjectName": "Don't Starve Together",
+    "join": "Join"
+  },
+  "footer": {
+    "supportTitle": "Support us",
+    "joinTitle": "Join",
+    "socialTitle": "Our socials",
+    "copyright": "© 2025 - łokar"
+  },
+  "modal": {
+    "downloads": "Downloads",
+    "info": "Info",
+    "description": "Description",
+    "screens": "Screenshots",
+    "prev": "Previous screenshot",
+    "next": "Next screenshot",
+    "close": "Close"
+  },
+  "metaLabels": {
+    "developer": "Developer:",
+    "genre": "Genre:",
+    "authors": "Translators:",
+    "words": "Word count:"
+  },
+  "cards": {
+    "more": "Details"
+  }
+}
+

@@ -1,0 +1,784 @@
+/* =========================
+   GLOBAL
+   ========================= */
+
+/* Каб не было “вылазіць за экран” */
+*, *::before, *::after { box-sizing: border-box; }
+
+html{ font-size: 18px; }
+
+body{
+  background-color:#111111;
+  color:#eeeeee;
+  font-family:'Montserrat Alternates', sans-serif;
+  margin:0;
+  padding:0;
+  overflow-x: hidden;
+}
+
+/* =========================
+   STICKY HEADER (fixed)
+   ========================= */
+
+.top-bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5000;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:20px;
+  font-weight:700;
+  font-size:22px;
+
+  background-color:#111111;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+/* Прыкладная вышыня fixed header: падганяем padding-top */
+body{ padding-top: 86px; }
+
+.logo{
+  color:#A9FF8E;
+  font-size:40px;
+  font-weight:1000;
+  margin:0px 10px 0px 40px;
+  white-space: nowrap;
+}
+
+nav{
+  display:flex;
+  gap:30px;
+  margin:0;
+  align-items:center;
+}
+
+nav a{
+  color:#A9FF8E;
+  text-decoration:none;
+}
+
+/* =========================
+   HEADER CONTENT
+   ========================= */
+
+.header-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding:0;
+}
+
+.header-alignment{
+  width:85%;
+  max-width:1500px;
+  margin:20px auto;
+  padding:30px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.header-left{ flex:1; }
+
+.main-title{
+  font-size:48px;
+  color:#A9FF8E;
+  margin:20px 0 10px 0;
+  font-weight:700;
+}
+
+.subtitle{
+  font-size:20px;
+  margin:0;
+  max-width:600px;
+  line-height: 1.55;
+}
+
+.header-right{
+  text-align:center;
+  margin-left:20px;
+  margin-top:30px;
+}
+
+.header-right span{
+  display:block;
+  color:#A9FF8E;
+  font-size:20px;
+}
+
+.header-right .game-name{
+  text-align:center;
+  font-size:22px;
+  color:#eeeeee;
+  margin:10px 0;
+}
+
+.game-button{
+  background-color:#A9FF8E;
+  color:#111111;
+  padding:10px 18px;
+  text-decoration:none;
+  border-radius:7px;
+  display:inline-block;
+  font-size:17px;
+  cursor:pointer;
+  user-select:none;
+  border:0;
+  font-weight:700;
+}
+
+/* =========================
+   GAME LIST
+   ========================= */
+
+.game-section{ padding:20px; transition:filter 0.3s ease; }
+
+.game-card{
+  background-color:#161d16;
+  width:85%;
+  max-width:1500px;
+  margin:20px auto;
+  padding:30px;
+  display:flex;
+  align-items:center;
+  gap:20px;
+  border-radius:10px;
+  transition:filter 0.3s ease;
+  cursor:pointer;
+}
+.game-card:hover{ filter:brightness(0.85); }
+
+.game-card img{
+  max-width:200px;
+  height:auto;
+  border-radius:10px;
+  display:block;
+}
+
+.game-info{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+
+.game-title{
+  font-size:30px;
+  color:#A9FF8E;
+  margin:0 0 10px 0;
+  font-weight:700;
+}
+
+.game-platforms{
+  font-size:17px;
+  color:#A9FF8E;
+  margin:0 0 10px 0;
+}
+
+.game-desc{
+  font-size:19px;
+  color:#eeeeee;
+  margin:0;
+  max-width:900px;
+  line-height:1.5;
+}
+
+.button-container{
+  align-self:center;
+  margin-left:auto;
+  flex: 0 0 auto;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer{
+  display:flex;
+  justify-content:space-around;
+  padding:20px;
+  background-color:#0E120D;
+  color:#eeeeee;
+}
+
+footer div{ text-align:center; }
+
+footer h3{
+  color:#A9FF8E;
+  font-size:24px;
+  margin-bottom:10px;
+  font-weight:700;
+}
+
+footer a{
+  color:#A9FF8E;
+  text-decoration:none;
+  display:block;
+  margin:5px 0;
+}
+
+.copyright{
+  text-align:center;
+  font-size:12px;
+  color:#eeeeee;
+  background-color:#0E120D;
+  padding:10px;
+}
+
+/* =========================
+   MODAL
+   ========================= */
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background-color:rgba(0,0,0,0.82);
+  z-index:1000;
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-content{
+  background-color:#0E120D;
+  width:95%;
+  max-width:1400px;
+  max-height:94vh;
+  overflow:auto;
+  border-radius:14px;
+  position:relative;
+  text-align:left;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255,255,255,0.06);
+  overflow-x: hidden;
+}
+
+/* × заўсёды зверху */
+.modal-x{
+  position: fixed;
+  top: calc(60px + env(safe-area-inset-top));
+  right: calc(10px + env(safe-area-inset-right));
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(169,255,142,0.35);
+  background: rgba(0,0,0,0.35);
+  color: #A9FF8E;
+  font-size: 30px;
+  line-height: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2000;
+  user-select: none;
+}
+body.modal-open .modal-x{ display:inline-flex; }
+.modal-x:active{ transform: scale(0.98); }
+
+/* Абгортка з падпаддзінгам */
+.modal-inner{
+  padding: 24px;
+}
+
+/* Desktop layout */
+.modal-top{
+  display:flex;
+  align-items:flex-start;
+  gap:24px;
+}
+
+.game-img{
+  width:clamp(260px, 28vw, 380px);
+  height:auto;
+  border-radius:14px;
+  flex:0 0 auto;
+  border: 1px solid rgba(255,255,255,0.08);
+  display:block;
+}
+
+.game-img-mobile{ display:none; }
+.game-img-desktop{ display:block; }
+
+.modal-side{
+  flex:1;
+  min-width:320px;
+  display:flex;
+  flex-direction:column;
+}
+
+.modal-main-row{
+  display:flex;
+  gap:22px;
+  align-items:flex-start;
+  justify-content:space-between;
+  width:100%;
+  margin:0 0 8px 0;
+}
+
+.modal-left{
+  flex:1 1 auto;
+  min-width:280px;
+}
+
+.modal-title-row{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:12px;
+  flex-wrap:wrap;
+  margin:0 0 10px 0;
+}
+
+.modal-title{
+  margin:0;
+  font-size:32px;
+  color:#A9FF8E;
+  font-weight:700;
+}
+
+.modal-icons{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+.modal-icon{
+  width:28px;
+  height:28px;
+  object-fit:contain;
+  display:block;
+  border-radius:6px;
+  opacity:0.95;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.15);
+}
+
+.modal-icon-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:36px;
+  height:36px;
+  border-radius:12px;
+  border: 1px solid rgba(169,255,142,0.25);
+  background: rgba(0,0,0,0.18);
+  transition: transform 0.15s ease, filter 0.15s ease, border-color 0.15s ease;
+  user-select:none;
+  text-decoration:none;
+}
+.modal-icon-link:hover{
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+  border-color: rgba(169,255,142,0.45);
+}
+
+.modal-actions{
+  width:100%;
+  max-width:520px;
+}
+
+.modal-screenshots-title{
+  color:#A9FF8E;
+  font-size:28px;
+  margin:0 0 10px 0;
+  font-weight:700;
+}
+
+.modal-platform-title{
+  color:#A9FF8E;
+  font-size:24px;
+  margin:14px 0 8px 0;
+  font-weight:700;
+}
+
+.modal-download-buttons{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.modal-meta{
+  flex:0 0 360px;
+  padding:14px;
+  border: 1px solid rgba(169,255,142,0.18);
+  border-radius:14px;
+  background: rgba(255,255,255,0.03);
+  margin-top:0;
+}
+
+.meta-title{
+  margin:0 0 12px 0;
+  color:#A9FF8E;
+  font-weight:700;
+  font-size:24px;
+}
+
+.meta-grid{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.meta-badge{
+  display:flex;
+  align-items: baseline;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:14px;
+  border: 1px solid rgba(169,255,142,0.25);
+  background: rgba(0,0,0,0.18);
+  width:100%;
+}
+
+.meta-badge .k{
+  color:#A9FF8E;
+  font-weight:800;
+  font-size:15px;
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  white-space:nowrap;
+  opacity:0.95;
+  line-height: 1.35;
+  flex:0 0 auto;
+}
+
+.meta-badge .v{
+  color:#eeeeee;
+  font-weight:700;
+  font-size:15px;
+  white-space:normal;
+  overflow:visible;
+  text-overflow:clip;
+  max-width:none;
+  flex:1 1 auto;
+  min-width:0;
+  word-break:break-word;
+  line-height: 1.35;
+}
+
+.meta-badge.words .v{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  letter-spacing:0.02em;
+}
+
+.modal-description{
+  margin:10px 0 0 0;
+  font-size:20px;
+  line-height:1.65;
+  color:#eeeeee;
+  max-width:1100px;
+}
+
+.modal-screenshots{ margin-top:28px; }
+.carousel{ position:relative; }
+
+.modal-screenshot-container{
+  display:flex;
+  gap:16px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  scroll-behavior:smooth;
+  padding:18px 90px;
+  -webkit-overflow-scrolling:touch;
+  scroll-snap-type:x mandatory;
+}
+
+.modal-screenshot{
+  width:clamp(420px, 48vw, 820px);
+  height:420px;
+  object-fit:cover;
+  border-radius:14px;
+  transition:transform 0.25s ease;
+  flex:0 0 auto;
+  scroll-snap-align:center;
+  cursor:pointer;
+  user-select:none;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.modal-screenshot.active{ transform:scale(1.08); }
+
+.prev, .next{
+  position:absolute;
+  top:50%;
+  transform:translateY(-50%);
+  background:rgba(0,0,0,0.55);
+  color:white;
+  border:none;
+  padding:12px 14px;
+  cursor:pointer;
+  z-index:2;
+  border-radius:12px;
+  user-select:none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+.prev{ left:10px; }
+.next{ right:10px; }
+
+.game-section-blur{ filter:blur(5px); }
+body.modal-open{ overflow:hidden; }
+
+/* =========================
+   LANGUAGE DROPDOWN
+   ========================= */
+
+.lang{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 14px;
+}
+
+.lang-btn{
+  background: transparent;
+  color: #A9FF8E;
+  border: 0;
+  padding: 0 2px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lang-menu{
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  background: #0E120D;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  min-width: 190px;
+  padding: 6px;
+  display: none;
+  z-index: 3000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+}
+
+.lang-item{
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  color: #eeeeee;
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.lang-item:hover{
+  background: rgba(169,255,142,0.12);
+  color: #A9FF8E;
+}
+
+@media (hover:hover){
+  .lang:hover .lang-menu{ display: block; }
+
+  /* мост, каб меню не знікала пры пераходзе курсора */
+  .lang::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    top:100%;
+    height:12px;
+  }
+}
+
+.lang.open .lang-menu{ display: block; }
+
+/* =========================
+   MOBILE FIX PACK
+   (НЕ чапае дэсктоп)
+   ========================= */
+
+@media (max-width: 980px){
+
+  /* Меншы базавы шрыфт ТОЛЬКІ на мабільных */
+  html{ font-size: 15px; }
+
+  /* Header fixed: ніжэйшая вышыня */
+  body{ padding-top: 66px; }
+
+  .top-bar{
+    padding: 12px 14px;
+    font-size: 16px;
+    gap: 10px;
+  }
+
+  .logo{
+    font-size: 28px;
+    margin: 0;
+  }
+
+  nav{
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+
+  nav a{ font-size: 16px; }
+
+  /* dropdown не вылазіць */
+  .lang{ margin-right: 8px; }
+  .lang-menu{
+    right: 0;
+    min-width: 160px;
+    max-width: min(220px, 90vw);
+  }
+  .lang-item{
+    padding: 9px 10px;
+    font-size: 15px;
+  }
+
+  /* Верхняя секцыя */
+  .header-alignment{
+    width: 92%;
+    padding: 16px;
+    margin: 10px auto;
+    gap: 12px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .header-right{ order: 1; margin: 0; text-align: left; }
+  .header-left{ order: 2; }
+  .header-right .game-name{ text-align: left; }
+
+  .main-title{
+    font-size: 32px;
+    margin: 10px 0 8px 0;
+  }
+
+  .subtitle{
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: none;
+  }
+
+  .header-right span{ font-size: 16px; }
+  .header-right .game-name{ font-size: 17px; }
+
+  .game-button{
+    font-size: 15px;
+    padding: 10px 14px;
+  }
+
+  /* Карткі */
+  .game-card{
+    width: 92%;
+    padding: 16px;
+    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .game-card img{
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .button-container{
+    margin-left: 0;
+    align-self: flex-start;
+  }
+
+  .game-title{ font-size: 22px; }
+  .game-platforms{ font-size: 14px; }
+  .game-desc{ font-size: 15px; }
+
+  /* Footer: у калонку */
+  footer{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 18px 14px;
+  }
+
+  footer div{ text-align: left; }
+
+  footer h3{
+    font-size: 18px;
+    margin: 0 0 8px 0;
+  }
+
+  footer a{
+    font-size: 16px;
+    margin: 6px 0;
+  }
+
+  .copyright{
+    font-size: 12px;
+    padding: 12px 14px;
+  }
+
+  /* Modal: памяншаем тэкст */
+  .modal-inner{
+    padding:
+      calc(18px + env(safe-area-inset-top))
+      calc(16px + env(safe-area-inset-right))
+      calc(22px + env(safe-area-inset-bottom))
+      calc(16px + env(safe-area-inset-left));
+  }
+
+  .modal-content{
+    width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .game-img-mobile{ display:block; }
+  .game-img-desktop{ display:none; }
+
+  .game-img{
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+
+  .modal-top{ display:block; }
+
+  .modal-main-row{
+    flex-direction: column;
+    gap: 14px;
+    align-items: stretch;
+  }
+
+  .modal-meta{
+    width: 100%;
+    flex: unset;
+  }
+
+  .modal-actions{
+    max-width: none;
+    width: 100%;
+  }
+
+  .modal-title{ font-size: 22px; }
+  .modal-screenshots-title{ font-size: 18px; }
+  .modal-platform-title{ font-size: 17px; }
+  .meta-title{ font-size: 18px; }
+  .modal-description{ font-size: 15px; }
+
+  .meta-badge .k{ font-size: 12px; }
+  .meta-badge .v{ font-size: 13px; }
+
+  .modal-screenshot-container{
+    padding: 12px 56px;
+    gap: 12px;
+  }
+
+  .modal-screenshot{
+    width: 86vw;
+    max-width: 560px;
+    height: 260px;
+  }
+}

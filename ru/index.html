@@ -32,38 +32,24 @@
   <div class="top-bar">
     <div class="logo">łokar</div>
     <nav>
-      <div class="lang" id="lang">
-        <button class="lang-btn" type="button" id="langBtn" aria-haspopup="true" aria-expanded="false">
-          <span id="langShort">BE</span>
-        </button>
-
-        <div class="lang-menu" id="langMenu" role="menu">
-          <button type="button" class="lang-item" data-lang="be" role="menuitem">BE — Беларуская</button>
-          <button type="button" class="lang-item" data-lang="ru" role="menuitem">RU — Русский</button>
-          <button type="button" class="lang-item" data-lang="en" role="menuitem">EN — English</button>
-        </div>
-      </div>
-
-      <a href="https://www.patreon.com/c/lokar_lak" target="_blank" rel="noopener noreferrer" data-ui="nav.support">падтрымаць</a>
+      <a href="https://www.patreon.com/c/lokar_lak" target="_blank" rel="noopener noreferrer">падтрымаць</a>
     </nav>
-
-
   </div>
 
   <div class="header-container">
     <div class="header-alignment">
       <div class="header-left">
-        <h1 class="main-title" data-ui="header.aboutTitle">Пра нас</h1>
-        <p class="subtitle" data-ui="header.aboutText"> 
+        <h1 class="main-title">Пра нас</h1>
+        <p class="subtitle">
           Мы — каманда лакізатараў-энтузіастаў і проста аматараў якасных камп’тарных гульняў.
           З намі геймінг на роднай мове становіцца даступней, а вы зможаце адчуць самы смак беларускай у вашых улюблёных праектах.
         </p>
       </div>
 
       <div class="header-right">
-        <span data-ui="header.currentLabel">Бягучы праект</span>
-        <div class="game-name" data-ui="header.currentProjectName">Don't Starve Together</div>
-        <a href="https://forms.gle/NWaErzdBpwZfXLNM6" target="_blank" rel="noopener noreferrer" class="game-button" data-ui="header.join">Далучыцца</a>
+        <span>Бягучы праект</span>
+        <div class="game-name">Don't Starve Together</div>
+        <a href="https://forms.gle/NWaErzdBpwZfXLNM6" target="_blank" rel="noopener noreferrer" class="game-button">Далучыцца</a>
       </div>
     </div>
   </div>
@@ -72,24 +58,23 @@
 
   <footer>
     <div>
-      <h3 data-ui="footer.supportTitle">падтрымаць нас</h3>
+      <h3>падтрымаць нас</h3>
       <a href="https://www.patreon.com/c/lokar_lak" target="_blank" rel="noopener noreferrer">Patreon</a>
       <a href="https://boosty.to/lokar_lak" target="_blank" rel="noopener noreferrer">Boosty</a>
     </div>
     <div>
-      <h3 data-ui="footer.joinTitle">далучыцца</h3>
+      <h3>далучыцца</h3>
       <a href="https://forms.gle/NWaErzdBpwZfXLNM6" target="_blank" rel="noopener noreferrer">Google Forms</a>
     </div>
     <div>
-      <h3 data-ui="footer.socialTitle">нашы сацсеткі</h3>
+      <h3>нашы сацсеткі</h3>
       <a href="https://x.com/lokar_lak" target="_blank" rel="noopener noreferrer">Twitter</a>
       <a href="https://t.me/lokar_lak" target="_blank" rel="noopener noreferrer">Telegram</a>
       <a href="https://discord.com/invite/wCPEK5kFUj" target="_blank" rel="noopener noreferrer">Discord</a>
     </div>
   </footer>
 
- <p class="copyright" data-ui="footer.copyright">© 2025 - łokar</p>
-
+  <p class="copyright">© 2025 - łokar</p>
 
   <!-- MODAL -->
   <div id="modal" class="modal" aria-hidden="true">
@@ -120,22 +105,22 @@
               </div>
 
               <div class="modal-meta">
-                <div class="meta-title" data-ui="modal.info">Інфармацыя</div>
+                <div class="meta-title">Інфармацыя</div>
                 <div id="meta-grid" class="meta-grid"></div>
               </div>
             </div>
           </div>
         </div>
 
-        <h3 class="modal-screenshots-title" style="margin-top:18px;" data-ui="modal.description">Апісанне</h3>
+        <h3 class="modal-screenshots-title" style="margin-top:18px;">Апісанне</h3>
         <p id="modal-description" class="modal-description"></p>
 
         <div id="modal-screenshots" class="modal-screenshots">
-          <h3 class="modal-screenshots-title" data-ui="modal.screens">Скрыншоты</h3>
+          <h3 class="modal-screenshots-title">Скрыншоты</h3>
           <div class="carousel">
-            <button type="button" class="prev" onclick="scrollCarousel(-1)" aria-label="Папярэдні скрыншот" data-ui-aria="modal.prev">&lt;</button>
+            <button type="button" class="prev" onclick="scrollCarousel(-1)" aria-label="Папярэдні скрыншот">&lt;</button>
             <div id="screenshot-container" class="modal-screenshot-container"></div>
-            <button type="button" class="next" onclick="scrollCarousel(1)" aria-label="Наступны скрыншот" data-ui-aria="modal.next">&gt;</button>
+            <button type="button" class="next" onclick="scrollCarousel(1)" aria-label="Наступны скрыншот">&gt;</button>
           </div>
         </div>
       </div>
