@@ -261,7 +261,7 @@ footer a{
 /* × заўсёды зверху */
 .modal-x{
   position: fixed;
-  top: calc(60px + env(safe-area-inset-top));
+  top: calc(10px + env(safe-area-inset-top));
   right: calc(10px + env(safe-area-inset-right));
   width: 40px;
   height: 40px;
@@ -280,6 +280,12 @@ footer a{
 }
 body.modal-open .modal-x{ display:inline-flex; }
 .modal-x:active{ transform: scale(0.98); }
+
+body.modal-open .top-bar{
+  display: none;
+}
+/* тады можна пакінуць .modal z-index як ёсць, але ўсё роўна лепш падняць */
+
 
 /* Абгортка з падпаддзінгам */
 .modal-inner{
