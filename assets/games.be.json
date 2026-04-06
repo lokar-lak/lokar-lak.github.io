@@ -1,4 +1,36 @@
-[
+[{
+    "id": "dst",
+    "pageUrl": "games/dst.html",
+    "title": "Stardew Valley",
+    "cover": "images/photo_2026-04-06_19-29-25.jpg",
+    "cardPlatforms": "pc · афіцыйны правапісы",
+    "description": "Don’t Starve Together — гэта бескампрамісная гульня пра выжыванне ў глушыні, прасякнутае навукай і магіяй. Станьце часткай дзіўнага і недаследаванага свету, поўнага дзівацкіх істот, небяспек і сюрпрызаў. Збірайце рэсурсы, майстуйце прадметы, узвадзіце пабудовы, але глоўнае — НЕ ГАЛАДАЙАЙЦЕ!",
+    "downloads": [
+      {
+        "platform": "PC версія",
+        "links": [
+          { "text": "Steam", "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3508511660" }
+        ]
+      }
+    ],
+    "screenshots": [
+      "images/dst/dontstarve_steam_x64_4GKNBubXlL.jpg",
+      "images/dst/dontstarve_steam_x64_9RWX3Z2jdC.jpg",
+      "images/dst/dontstarve_steam_x64_iUXuu7iTku.jpg",
+      "images/dst/dontstarve_steam_x64_48LRvvGycb.jpg",
+      "images/dst/dontstarve_steam_x64_oFDIiPaFg0.jpg",
+      "images/dst/dontstarve_steam_x64_SFF2Ijf0ES.jpg"
+    ],
+    "icons": [
+      { "alt": "Steam", "img": "images/icons/steam-svgrepo-com.svg", "url": "https://store.steampowered.com/app/322330/Dont_Starve_Together/" }
+    ],
+    "meta": {
+      "developer": "ConcernedApe",
+      "genre": "Выжыванне / Адкрыты сусвет / Шматкарыстальніцкая",
+      "translators": "Ueschar, Dymniška, Данік, tasya yatsen, Мікіта Курачка",
+      "words": "~460.000"
+    }
+  },
   {
     "id": "stardew",
     "pageUrl": "games/stardew-valley.html",
@@ -79,7 +111,7 @@
     "meta": {
       "developer": "Wrong Organ",
       "genre": "Вар’яцтва / Жахі",
-      "translators": "Dymniška, Міхалеў Аляксандр",
+      "translators": "Dymniška, Ueschar",
       "words": "~6.000"
     }
   },
@@ -113,7 +145,7 @@
     "meta": {
       "developer": "New World Computing",
       "genre": "Пакрокавая стратэгія",
-      "translators": "Аляксандр Шумскі, Аляксандр Міхалеў, Vasil Pupkin",
+      "translators": "Аляксандр Шумскі, Ueschar, Vasil Pupkin",
       "words": "~130.000"
     }
   },
@@ -148,7 +180,7 @@
     "meta": {
       "developer": "Iron Gate Studio",
       "genre": "Survival / Open World",
-      "translators": "Міхалеў Аляксандр, Dymniška, Данік. Kastuś",
+      "translators": "Ueschar, Dymniška, Данік. Kastuś",
       "words": "~30.000"
     }
   }
