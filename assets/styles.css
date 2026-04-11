@@ -788,3 +788,134 @@ body.modal-open{ overflow:hidden; }
     height: 260px;
   }
 }
+/* ===== CURRENT PROJECT NAME — хаваем і паказваем на hover ===== */
+.header-right .game-name {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  /* можна дадаць лёгкі эфект павелічэння */
+  transform: scale(0.95);
+}
+
+.header-right:hover .game-name {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Дадатковы эфект (пры жаданні) — можна выдаліць */
+.header-right {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.header-right:hover {
+  transform: translateY(-1px);
+}
+
+/* ===== CURRENT PROJECT NAME — хаваем і паказваем на hover ===== */
+.header-right .game-name {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  /* можна дадаць лёгкі эфект павелічэння */
+  transform: scale(0.95);
+}
+
+.header-right:hover .game-name {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Дадатковы эфект (пры жаданні) — можна выдаліць */
+.header-right {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.header-right:hover {
+  transform: translateY(-1px);
+}
+
+/* ===== БЯГУЧЫ ПРАЕКТ — вертыкальны слупок + змена на hover ===== */
+.header-right {
+  display: flex;
+  flex-direction: column;     /* робім усё ў слупок */
+  align-items: center;        /* цэнтруе па гарызанталі */
+  gap: 12px;
+}
+
+.current-project-reveal {
+  position: relative;
+  width: 120px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.question-icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(145deg, #2a2a2a, #111111);
+  color: #ffd700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  cursor: help;
+  transition: all 0.35s ease;
+  z-index: 2;
+  position: absolute;
+}
+
+.reveal-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  z-index: 1;
+}
+
+.current-project-reveal:hover .question-icon {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.current-project-reveal:hover .reveal-content {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.current-logo {
+  height: 64px;
+  width: auto;
+  max-width: 110px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+  margin-top: 12px;
+  margin-bottom: -10px;
+}
+
+.game-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* Кнопка "Далучыцца" застаецца ўнізе */
+.header-right .game-button {
+  margin-top: 8px;
+}
