@@ -183,6 +183,25 @@
       "translators": "Ueschar, Dymniška, Данік. Kastuś",
       "words": "~30.000"
     }
+  },
+  {
+    "id": "sts2",
+    "pageUrl": "games/sts2.html",
+    "title": "Slay the Spire 2",
+    "cover": "images/sts2_img.png",
+    "cardPlatforms": "pc · афіцыйны правапіс",
+    "description": "Slay the Spire 2 — доўгачаканы працяг рогулайк-калодабудаўнічага хіта. Новая каманда з 5 герояў, шторазовыя варыянты актаў, кааператыў да 4 гульцоў і дзясяткі новых механікаў чакаюць на вяршыні Шпіля.",
+    "downloads": [],
+    "screenshots": [],
+    "icons": [
+      { "alt": "Steam", "img": "images/icons/steam-svgrepo-com.svg", "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/" }
+    ],
+    "meta": {
+      "developer": "Mega Crit",
+      "genre": "Roguelike deck-building",
+      "translators": "—",
+      "words": "—"
+    }
   }
 ]
 
