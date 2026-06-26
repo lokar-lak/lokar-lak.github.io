@@ -5,7 +5,15 @@
     "cover": "images/STS2_img.jpg",
     "cardPlatforms": "PC · oficjalna ortografia",
     "description": "Slay the Spire 2 to długo wyczekiwana kontynuacja roguelike'owego hitu o budowaniu talii. Nowa drużyna 5 bohaterów, zmienne układy aktów, kooperacja dla 4 graczy i dziesiątki nowych mechaników czekają na szczycie Spire.",
-    "downloads": [],
+    "downloads": [
+      {
+        "platform": "Wersja PC",
+        "links": [
+          { "text": "Nexus", "url": "https://www.nexusmods.com/slaythespire2/mods/1162" },
+          { "text": "Mega", "url": "https://mega.nz/folder/LypR0LBT#-LAPO3GpoPdrACof3VbVkw" }
+        ]
+      }
+    ],
     "screenshots": [
       "images/sts2/20260611213007_1.jpg",
       "images/sts2/20260611234750_1.jpg",
@@ -24,8 +32,8 @@
     "meta": {
       "developer": "Mega Crit",
       "genre": "Roguelike deck-building",
-      "translators": "—",
-      "words": "—"
+      "translators": "Ueschar, aerialfiddle, Dymniška",
+      "words": "~57.000"
     }
   },
   {

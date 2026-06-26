@@ -5,7 +5,15 @@
     "cover": "images/STS2_img.jpg",
     "cardPlatforms": "pc · афіцыйны правапіс",
     "description": "Знакавы роглайк вяртаецца. Збярыце ўнікальную калоду, сыдзіцеся ў бітве з пачварнымі істотамі і адкрыйце рэліквіі невераемнай моцы. Усё гэта ў Slay the Spire 2!",
-    "downloads": [],
+    "downloads": [
+      {
+        "platform": "PC версія",
+        "links": [
+          { "text": "Nexus", "url": "https://www.nexusmods.com/slaythespire2/mods/1162" },
+          { "text": "Mega", "url": "https://mega.nz/folder/LypR0LBT#-LAPO3GpoPdrACof3VbVkw" }
+        ]
+      }
+    ],
     "screenshots": [
       "images/sts2/20260611213007_1.jpg",
       "images/sts2/20260611234750_1.jpg",
@@ -23,7 +31,7 @@
     ],
     "meta": {
       "developer": "Mega Crit",
-      "genre": "Roguelike deck-building",
+      "genre": "Роглайк са стварэнне калоды",
       "translators": "Ueschar, aerialfiddle, Dymniška",
       "words": "~57.000"
     }
