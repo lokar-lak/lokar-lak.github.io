@@ -1,6 +1,7 @@
 {
   "lang": { "short": "RU" },
   "nav": {
+    "catalog": "Каталог",
     "support": "Поддержать"
   },
   "header": {

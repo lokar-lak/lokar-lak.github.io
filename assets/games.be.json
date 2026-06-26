@@ -1,4 +1,34 @@
 [{
+    "id": "sts2",
+    "pageUrl": "games/sts2.html",
+    "title": "Slay the Spire 2",
+    "cover": "images/STS2_img.jpg",
+    "cardPlatforms": "pc · афіцыйны правапіс",
+    "description": "Знакавы роглайк вяртаецца. Збярыце ўнікальную калоду, сыдзіцеся ў бітве з пачварнымі істотамі і адкрыйце рэліквіі невераемнай моцы. Усё гэта ў Slay the Spire 2!",
+    "downloads": [],
+    "screenshots": [
+      "images/sts2/20260611213007_1.jpg",
+      "images/sts2/20260611234750_1.jpg",
+      "images/sts2/20260611234844_1.jpg",
+      "images/sts2/20260611234942_1.jpg",
+      "images/sts2/20260611235024_1.jpg",
+      "images/sts2/20260611235109_1.jpg",
+      "images/sts2/20260611235148_1.jpg",
+      "images/sts2/20260611235430_1.jpg",
+      "images/sts2/20260611235824_1.jpg",
+      "images/sts2/20260611235957_1.jpg"
+    ],
+    "icons": [
+      { "alt": "Steam", "img": "images/icons/steam-svgrepo-com.svg", "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/" }
+    ],
+    "meta": {
+      "developer": "Mega Crit",
+      "genre": "Roguelike deck-building",
+      "translators": "Ueschar, aerialfiddle, Dymniška",
+      "words": "~57.000"
+    }
+  },
+  {
     "id": "dst",
     "pageUrl": "games/dst.html",
     "title": "Don't Starve Together",
@@ -182,25 +212,6 @@
       "genre": "Survival / Open World",
       "translators": "Ueschar, Dymniška, Данік. Kastuś",
       "words": "~30.000"
-    }
-  },
-  {
-    "id": "sts2",
-    "pageUrl": "games/sts2.html",
-    "title": "Slay the Spire 2",
-    "cover": "images/sts2_img.png",
-    "cardPlatforms": "pc · афіцыйны правапіс",
-    "description": "Slay the Spire 2 — доўгачаканы працяг рогулайк-калодабудаўнічага хіта. Новая каманда з 5 герояў, шторазовыя варыянты актаў, кааператыў да 4 гульцоў і дзясяткі новых механікаў чакаюць на вяршыні Шпіля.",
-    "downloads": [],
-    "screenshots": [],
-    "icons": [
-      { "alt": "Steam", "img": "images/icons/steam-svgrepo-com.svg", "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/" }
-    ],
-    "meta": {
-      "developer": "Mega Crit",
-      "genre": "Roguelike deck-building",
-      "translators": "—",
-      "words": "—"
     }
   }
 ]

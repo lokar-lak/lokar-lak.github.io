@@ -1,4 +1,34 @@
 [{
+    "id": "sts2",
+    "pageUrl": "games/sts2.html",
+    "title": "Slay the Spire 2",
+    "cover": "images/STS2_img.jpg",
+    "cardPlatforms": "PC · официальное написание",
+    "description": "Slay the Spire 2 — долгожданное продолжение роглайк-колодостроительного хита. Новая команда из 5 героев, различные варианты актов, кооператив до 4 игроков и десятки новых механик ждут на вершине Шпиля.",
+    "downloads": [],
+    "screenshots": [
+      "images/sts2/20260611213007_1.jpg",
+      "images/sts2/20260611234750_1.jpg",
+      "images/sts2/20260611234844_1.jpg",
+      "images/sts2/20260611234942_1.jpg",
+      "images/sts2/20260611235024_1.jpg",
+      "images/sts2/20260611235109_1.jpg",
+      "images/sts2/20260611235148_1.jpg",
+      "images/sts2/20260611235430_1.jpg",
+      "images/sts2/20260611235824_1.jpg",
+      "images/sts2/20260611235957_1.jpg"
+    ],
+    "icons": [
+      { "alt": "Steam", "img": "images/icons/steam-svgrepo-com.svg", "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/" }
+    ],
+    "meta": {
+      "developer": "Mega Crit",
+      "genre": "Roguelike deck-building",
+      "translators": "—",
+      "words": "—"
+    }
+  },
+  {
   "id": "dst",
   "pageUrl": "games/dst.html",
   "title": "Don't Starve Together",

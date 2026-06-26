@@ -1,6 +1,7 @@
 {
   "lang": { "short": "PL" },
   "nav": {
+    "catalog": "Katalog",
     "support": "Wesprzyj"
   },
   "header": {
