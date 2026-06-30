@@ -9,6 +9,7 @@ html{ font-size: 18px; }
 
 body{
   background-color:#111111;
+  background-image: radial-gradient(ellipse at 50% 0%, rgba(169,255,142,0.04) 0%, transparent 60%);
   color:#eeeeee;
   font-family:'Montserrat Alternates', sans-serif;
   margin:0;
@@ -60,7 +61,9 @@ nav{
 nav a{
   color:#A9FF8E;
   text-decoration:none;
+  transition: opacity 0.2s ease;
 }
+nav a:hover{ opacity: 0.7; }
 
 /* =========================
    HEADER CONTENT
@@ -90,6 +93,17 @@ nav a{
   color:#A9FF8E;
   margin:20px 0 10px 0;
   font-weight:700;
+  position: relative;
+  display: inline-block;
+}
+.main-title::after{
+  content: '';
+  display: block;
+  width: 34px;
+  height: 4px;
+  background: #A9FF8E;
+  border-radius: 8px;
+  margin-top: 12px;
 }
 
 .subtitle{
@@ -123,14 +137,17 @@ nav a{
   color:#111111;
   padding:10px 18px;
   text-decoration:none;
-  border-radius:7px;
+  border-radius:8px;
   display:inline-block;
   font-size:17px;
   cursor:pointer;
   user-select:none;
   border:0;
   font-weight:700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+.game-button:hover{ transform: scale(1.04); box-shadow: 0 0 20px rgba(169,255,142,0.25); }
+.game-button:active{ transform: scale(0.98); }
 
 /* =========================
    GAME LIST
@@ -139,7 +156,7 @@ nav a{
 .game-section{ padding:20px; transition:filter 0.3s ease; }
 
 .game-card{
-  background-color:#161d16;
+  background-color:#20211F;
   width:85%;
   max-width:1500px;
   margin:20px auto;
@@ -147,11 +164,13 @@ nav a{
   display:flex;
   align-items:center;
   gap:20px;
-  border-radius:10px;
-  transition:filter 0.3s ease;
+  border-radius:16px;
+  border: 1px solid rgba(169,255,142,0.06);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  transition:transform 0.3s ease, box-shadow 0.3s ease;
   cursor:pointer;
 }
-.game-card:hover{ filter:brightness(0.85); }
+.game-card:hover{ transform: translateY(-4px); box-shadow: 0 8px 40px rgba(169,255,142,0.08); }
 
 .game-card img{
   max-width:200px;
@@ -242,32 +261,44 @@ footer a{
   z-index:1000;
   justify-content:center;
   align-items:center;
+  animation:modalFadeIn 0.25s ease;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 .modal-content{
-  background-color:#0E120D;
+  background-color:#20211F;
   width:95%;
   max-width:1400px;
   max-height:94vh;
   overflow:auto;
-  border-radius:14px;
+  border-radius:16px;
   position:relative;
   text-align:left;
   box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(169,255,142,0.08);
   overflow-x: hidden;
+  animation: modalContentIn 0.3s ease;
+}
+
+@keyframes modalContentIn {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 /* × заўсёды зверху */
 .modal-x{
   position: fixed;
-  top: calc(10px + env(safe-area-inset-top));
-  right: calc(10px + env(safe-area-inset-right));
+  top: 12px;
+  right: 12px;
   width: 40px;
   height: 40px;
   border-radius: 12px;
   border: 1px solid rgba(169,255,142,0.35);
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.55);
   color: #A9FF8E;
   font-size: 30px;
   line-height: 1;
@@ -277,9 +308,13 @@ footer a{
   cursor: pointer;
   z-index: 2000;
   user-select: none;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 body.modal-open .modal-x{ display:inline-flex; }
-.modal-x:active{ transform: scale(0.98); }
+body.modal-open .modal-x:hover{ background: rgba(0,0,0,0.7); box-shadow: 0 0 16px rgba(169,255,142,0.2); border-color: rgba(169,255,142,0.6); }
+body.modal-open .modal-x:active{ transform: scale(0.92); }
 
 body.modal-open .top-bar{
   display: none;
