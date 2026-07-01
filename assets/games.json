@@ -1,0 +1,597 @@
+[
+  {
+    "id": "dst",
+    "pageUrl": "games/dst.html",
+    "cover": "images/dst/photo_2026-04-06_19-29-25.jpg",
+    "screenshots": [
+      "images/dst/dontstarve_steam_x64_4GKNBubXlL.jpg",
+      "images/dst/dontstarve_steam_x64_9RWX3Z2jdC.jpg",
+      "images/dst/dontstarve_steam_x64_iUXuu7iTku.jpg",
+      "images/dst/dontstarve_steam_x64_48LRvvGycb.jpg",
+      "images/dst/dontstarve_steam_x64_oFDIiPaFg0.jpg",
+      "images/dst/dontstarve_steam_x64_SFF2Ijf0ES.jpg"
+    ],
+    "icons": [
+      {
+        "alt": "Steam",
+        "img": "images/icons/steam-svgrepo-com.svg",
+        "url": "https://store.steampowered.com/app/322330/Dont_Starve_Together/"
+      }
+    ],
+    "title": {
+      "be": "Don't Starve Together",
+      "ru": "Don't Starve Together",
+      "en": "Don't Starve Together",
+      "pl": "Don't Starve Together"
+    },
+    "cardPlatforms": {
+      "be": "pc · афіцыйны правапіс",
+      "ru": "PC · официальное написание",
+      "en": "PC · official spelling",
+      "pl": "PC · oficjalna ortografia"
+    },
+    "description": {
+      "be": "Don’t Starve Together — гэта бескампрамісная гульня пра выжыванне ў глушыні, прасякнутае навукай і магіяй. Станьце часткай дзіўнага і недаследаванага свету, поўнага дзівацкіх істот, небяспек і сюрпрызаў. Збірайце рэсурсы, майстуйце прадметы, узвадзіце пабудовы, але глоўнае — НЕ ГАЛАДАЙАЙЦЕ!",
+      "ru": "Don’t Starve Together — это бескомпромиссная игра о выживании в глуши, пропитанная наукой и магией. Станьте частью странного и неизведанного мира, полного причудливых существ, опасностей и сюрпризов. Собирайте ресурсы, создавайте предметы, возводите постройки, но главное — НЕ ГОЛОДАЙТЕ!",
+      "en": "Don’t Starve Together is an uncompromising survival game set in the wilderness, infused with science and magic. Become part of a strange and unexplored world full of bizarre creatures, dangers, and surprises. Gather resources, craft items, build structures, but most importantly — DON’T STARVE!",
+      "pl": "Don’t Starve Together to bezkompromisowa gra o przetrwaniu na pustkowiu, przesiąknięta nauką i magią. Stańcie się częścią dziwnego i nieodkrytego świata, pełnego osobliwych stworzeń, niebezpieczeństw i niespodzianek. Zbierajcie zasoby, twórzcie przedmioty, budujcie konstrukcje, ale przede wszystkim — NIE GŁODŹCIE SIĘ!"
+    },
+    "meta": {
+      "words": {
+        "be": "~460.000",
+        "ru": "~460.000",
+        "en": "~460,000",
+        "pl": "~460.000"
+      },
+      "translators": {
+        "be": "Ueschar, Dymniška, Данік, tasya yatsen, Мікіта Курачка",
+        "ru": "Ueschar, Dymniška, Данік, tasya yatsen, Мікіта Курачка",
+        "en": "Ueschar, Dymniška, Данік, tasya yatsen, Мікіта Курачка",
+        "pl": "Ueschar, Dymniška, Данік, tasya yatsen, Мікіта Курачка"
+      },
+      "genre": {
+        "be": "Выжыванне / Адкрыты сусвет / Шматкарыстальніцкая",
+        "ru": "Выживание / Открытый мир / Многопользовательская",
+        "en": "Survival / Open World / Multiplayer",
+        "pl": "Przetrwanie / Otwarty świat / Wieloosobowa"
+      },
+      "developer": "Klei Entertainment"
+    },
+    "downloads": [
+      {
+        "platform": {
+          "be": "PC версія",
+          "ru": "Версия для PC",
+          "en": "PC version",
+          "pl": "Wersja PC"
+        },
+        "links": [
+          {
+            "text": {
+              "be": "Steam",
+              "ru": "Steam",
+              "en": "Steam",
+              "pl": "Steam"
+            },
+            "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3508511660"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "homm3",
+    "pageUrl": "games/homm3.html",
+    "cover": "images/HOMM3_img.png",
+    "screenshots": [
+      "images/homm3/homm3-20250318-1.jpg",
+      "images/homm3/homm3-20250318-2.jpg",
+      "images/homm3/homm3-20250318-3.jpg",
+      "images/homm3/homm3-20250318-4.jpg",
+      "images/homm3/homm3-20250318-5.jpg",
+      "images/homm3/homm3-20250318-6.jpg"
+    ],
+    "icons": [
+      {
+        "alt": "GOG",
+        "img": "images/icons/gog_galaxy_alt_macos_bigsur_icon_190150-1908176498.png",
+        "url": "https://www.gog.com/pl/game/heroes_of_might_and_magic_3_complete_edition"
+      },
+      {
+        "alt": "Ubisoft store",
+        "img": "images/icons/uplay-svgrepo-com.svg",
+        "url": "https://store.ubisoft.com/eu/heroes-of-might-and-magic-iii--complete/575ffd9ba3be1633568b4d8c.html"
+      }
+    ],
+    "title": {
+      "be": "Heroes of Might & Magic 3",
+      "ru": "Heroes of Might & Magic 3",
+      "en": "Heroes of Might & Magic 3",
+      "pl": "Heroes of Might & Magic 3"
+    },
+    "cardPlatforms": {
+      "be": "pc · афіцыйны правапіс",
+      "ru": "PC · официальная орфография",
+      "en": "PC · official spelling",
+      "pl": "PC · oficjalna ortografia"
+    },
+    "description": {
+      "be": "Самая папулярная «геройская» гульня ўсіх часоў! Адкрыйце эпічную гісторыю каралевы Кацярыны Жалезны Кулак, якая распачынае вызваленчы паход, каб аб’яднаць спустошаную радзіму і зноў адрадзіць каралеўства Эрафію.",
+      "ru": "Самая популярная «геройская» игра всех времён! Откройте эпическую историю королевы Екатерины Айронфист, которая начинает освободительный поход, чтобы объединить разорённую родину и возродить королевство Эрафия.",
+      "en": "The most popular “Heroes” game of all time! Discover the epic story of Queen Catherine Ironfist, who begins a liberation campaign to unite her devastated homeland and restore the kingdom of Erathia.",
+      "pl": "Najpopularniejsza „bohaterska” gra wszech czasów! Odkryj epicką historię królowej Katarzyny Żelaznej Pięści, która rozpoczyna wyzwoleńczą kampanię, by zjednoczyć spustoszoną ojczyznę i odrodzić królestwo Erathii."
+    },
+    "meta": {
+      "words": {
+        "be": "~130.000",
+        "ru": "~130 000",
+        "en": "~130,000",
+        "pl": "~130 000"
+      },
+      "translators": {
+        "be": "Аляксандр Шумскі, Ueschar, Vasil Pupkin",
+        "ru": "Аляксандр Шумскі, Аляксандр Міхалеў, Vasil Pupkin",
+        "en": "Аляксандр Шумскі, Аляксандр Міхалеў, Vasil Pupkin",
+        "pl": "Aляксандр Шумскі, Aляксандр Міхалеў, Vasil Pupkin"
+      },
+      "genre": {
+        "be": "Пакрокавая стратэгія",
+        "ru": "Пошаговая стратегия",
+        "en": "Turn-based strategy",
+        "pl": "Strategia turowa"
+      },
+      "developer": "New World Computing"
+    },
+    "downloads": [
+      {
+        "platform": {
+          "be": "PC версія",
+          "ru": "PC версия",
+          "en": "PC version",
+          "pl": "Wersja PC"
+        },
+        "links": [
+          {
+            "text": {
+              "be": "Сайт",
+              "ru": "Сайт",
+              "en": "Website",
+              "pl": "Strona"
+            },
+            "url": "https://heroes.by-reservation.com/spampavac/"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mouthwashing",
+    "pageUrl": "games/mouthwashing.html",
+    "cover": "images/mouthwashing_img.png",
+    "screenshots": [
+      "images/mouthwashing/5-1738857539-1821796376.webp",
+      "images/mouthwashing/5-1738857552-1271356023.webp",
+      "images/mouthwashing/5-1738857561-1707518091.webp",
+      "images/mouthwashing/5-1738857571-1831959246.webp",
+      "images/mouthwashing/5-1738857592-519947450.webp",
+      "images/mouthwashing/5-1738857656-1426923202.webp",
+      "images/mouthwashing/5-1738857665-170199798.webp"
+    ],
+    "icons": [
+      {
+        "alt": "Steam",
+        "img": "images/icons/steam-svgrepo-com.svg",
+        "url": "https://store.steampowered.com/app/2475490/Mouthwashing/"
+      }
+    ],
+    "title": {
+      "be": "Mouthwashing",
+      "ru": "Mouthwashing",
+      "en": "Mouthwashing",
+      "pl": "Mouthwashing"
+    },
+    "cardPlatforms": {
+      "be": "pc · афіцыйны правапіс",
+      "ru": "PC · официальная орфография",
+      "en": "PC · official spelling",
+      "pl": "PC · oficjalna ortografia"
+    },
+    "description": {
+      "be": "Экіпаж з пяцярых асоб на караблі «Тульпар» захрас у пустэльных прасторах космасу, ахутаны бясконцым змрокам.<br><br>І бог іх не пільнуе.",
+      "ru": "Экипаж из пяти человек на корабле «Тульпар» застрял в пустынных просторах космоса, окутанных бесконечной тьмой.<br><br>И Бог за ними не присматривает.",
+      "en": "A five-person crew aboard the ship “Tulpar” is stranded in the empty stretches of space, wrapped in endless darkness.<br><br>And God is not watching over them.",
+      "pl": "Pięcioosobowa załoga statku „Tulpar” utknęła w pustych przestrzeniach kosmosu, spowitych nieskończoną ciemnością.<br><br>A Bóg nad nimi nie czuwa."
+    },
+    "meta": {
+      "words": {
+        "be": "~6.000",
+        "ru": "~6 000",
+        "en": "~6,000",
+        "pl": "~6 000"
+      },
+      "translators": {
+        "be": "Dymniška, Ueschar",
+        "ru": "Dymniška, Михалёв Александр",
+        "en": "Dymniška, Міхалеў Аляксандр",
+        "pl": "Dymniška, Mikhaleŭ Aliaksandr"
+      },
+      "genre": {
+        "be": "Вар’яцтва / Жахі",
+        "ru": "Хоррор",
+        "en": "Horror",
+        "pl": "Horror"
+      },
+      "developer": "Wrong Organ"
+    },
+    "downloads": [
+      {
+        "platform": {
+          "be": "PC версія",
+          "ru": "PC версия",
+          "en": "PC version",
+          "pl": "Wersja PC"
+        },
+        "links": [
+          {
+            "text": {
+              "be": "Nexus",
+              "ru": "Nexus",
+              "en": "Nexus",
+              "pl": "Nexus"
+            },
+            "url": "https://www.nexusmods.com/mouthwashing/mods/5/"
+          },
+          {
+            "text": {
+              "be": "Mega",
+              "ru": "Mega",
+              "en": "Mega",
+              "pl": "Mega"
+            },
+            "url": "https://mega.nz/file/BQhTzJ4Q#HvuVLT-vzT8r38vFKT8pzwl0-MO7DjDDu_zFi5U9JY0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "stardew",
+    "pageUrl": "games/stardew-valley.html",
+    "cover": "images/stardewValley_img.png",
+    "screenshots": [
+      "images/stardew/27171-1724275394-18024899.webp",
+      "images/stardew/27171-1725316923-1440891159.webp",
+      "images/stardew/27171-1734469877-305258919.webp",
+      "images/stardew/27171-1731440227-215258228.webp",
+      "images/stardew/27171-1731440220-1343818195.webp",
+      "images/stardew/27171-1724275398-1615238029.webp",
+      "images/stardew/27171-1724275400-1209489487.webp",
+      "images/stardew/27171-1724275394-1348653713.webp",
+      "images/stardew/27171-1732560547-1826579576.webp",
+      "images/stardew/27171-1732560547-1540111734.webp"
+    ],
+    "icons": [
+      {
+        "alt": "Steam",
+        "img": "images/icons/steam-svgrepo-com.svg",
+        "url": "https://store.steampowered.com/app/413150/Stardew_Valley/"
+      },
+      {
+        "alt": "GOG",
+        "img": "images/icons/gog_galaxy_alt_macos_bigsur_icon_190150-1908176498.png",
+        "url": "https://www.gog.com/game/stardew_valley"
+      },
+      {
+        "alt": "Google Play",
+        "img": "images/icons/google-play-icon-svgrepo-com.svg",
+        "url": "https://play.google.com/store/apps/details?id=com.chucklefish.stardewvalley&hl=pl&pli=1"
+      },
+      {
+        "alt": "Xbox",
+        "img": "images/icons/xbox-svgrepo-com.svg",
+        "url": "https://www.xbox.com/pl-pl/games/store/stardew-valley/c3d891z6tnqm"
+      }
+    ],
+    "title": {
+      "be": "Stardew Valley",
+      "ru": "Stardew Valley",
+      "en": "Stardew Valley",
+      "pl": "Stardew Valley"
+    },
+    "cardPlatforms": {
+      "be": "pc · android · клясычны і афіцыйны правапісы",
+      "ru": "PC · Android · классическая и официальная орфография",
+      "en": "PC · Android · classic & official spelling",
+      "pl": "PC · Android · klasyczna i oficjalna ortografia"
+    },
+    "description": {
+      "be": "Вы сталі спадкаемцам старой дзялянкі вашага дзеда ў даліне Стардзю. Узброіўшыся базавымі інструментамі і парай манет у кішэні, вы пачынаеце новае жыццё. Ці навучыцеся вы жыць з зямлі-карміліцы і ці стануць гэтыя зарослыя палі вашым новым квітучым домам?",
+      "ru": "Вы стали наследником старого фермерского участка вашего дедушки в долине Стардью. С базовыми инструментами и парой монет в кармане вы начинаете новую жизнь. Сможете ли вы научиться жить с земли-кормилицы и превратить заросшие поля в процветающий дом?",
+      "en": "You inherited your grandfather’s old farm plot in Stardew Valley. With only basic tools and a few coins in your pocket, you begin a new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
+      "pl": "Odziedziczyłeś(-aś) starą farmę po dziadku w Dolinie Stardew. Z podstawowymi narzędziami i garścią monet w kieszeni zaczynasz nowe życie. Czy nauczysz się żyć z ziemi i zamienisz zarośnięte pola w kwitnący dom?"
+    },
+    "meta": {
+      "words": {
+        "be": "~178.000",
+        "ru": "~178 000",
+        "en": "~178,000",
+        "pl": "~178 000"
+      },
+      "translators": {
+        "be": "Ueschar, Dymniška, Cactusovič",
+        "ru": "Ueschar, Dymniška, Cactusovič",
+        "en": "Ueschar, Dymniška, Cactusovič",
+        "pl": "Ueschar, Dymniška, Cactusovič"
+      },
+      "genre": {
+        "be": "Сімулятар / РПГ / Фэнтэзі",
+        "ru": "Симулятор / RPG / Фэнтези",
+        "en": "Simulation / RPG / Fantasy",
+        "pl": "Symulacja / RPG / Fantasy"
+      },
+      "developer": "ConcernedApe"
+    },
+    "downloads": [
+      {
+        "platform": {
+          "be": "PC версія",
+          "ru": "PC версия",
+          "en": "PC version",
+          "pl": "Wersja PC"
+        },
+        "links": [
+          {
+            "text": {
+              "be": "Nexus",
+              "ru": "Nexus",
+              "en": "Nexus",
+              "pl": "Nexus"
+            },
+            "url": "https://www.nexusmods.com/stardewvalley/mods/27171?tab=files"
+          },
+          {
+            "text": {
+              "be": "Mega",
+              "ru": "Mega",
+              "en": "Mega",
+              "pl": "Mega"
+            },
+            "url": "https://mega.nz/folder/C2higIIC#iAwKE4OBRBG7QQlGLjmKyg"
+          },
+          {
+            "text": {
+              "be": "CurseForge",
+              "ru": "CurseForge",
+              "en": "CurseForge",
+              "pl": "CurseForge"
+            },
+            "url": "https://www.curseforge.com/stardewvalley/mods/bielarusizatar-stardew-valley-belarusian"
+          }
+        ]
+      },
+      {
+        "platform": {
+          "be": "Android версія",
+          "ru": "Android версия",
+          "en": "Android version",
+          "pl": "Wersja Android"
+        },
+        "links": [
+          {
+            "text": {
+              "be": "Nexus",
+              "ru": "Nexus",
+              "en": "Nexus",
+              "pl": "Nexus"
+            },
+            "url": "https://www.nexusmods.com/stardewvalley/mods/27171?tab=files"
+          },
+          {
+            "text": {
+              "be": "Mega",
+              "ru": "Mega",
+              "en": "Mega",
+              "pl": "Mega"
+            },
+            "url": "https://mega.nz/folder/LuwHVQyB#GOsLjoFvrYdbW-slKhz11w"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "sts2",
+    "pageUrl": "games/sts2.html",
+    "cover": "images/STS2_img.jpg",
+    "screenshots": [
+      "images/sts2/20260611213007_1.jpg",
+      "images/sts2/20260611234750_1.jpg",
+      "images/sts2/20260611234844_1.jpg",
+      "images/sts2/20260611234942_1.jpg",
+      "images/sts2/20260611235024_1.jpg",
+      "images/sts2/20260611235109_1.jpg",
+      "images/sts2/20260611235148_1.jpg",
+      "images/sts2/20260611235430_1.jpg",
+      "images/sts2/20260611235824_1.jpg",
+      "images/sts2/20260611235957_1.jpg"
+    ],
+    "icons": [
+      {
+        "alt": "Steam",
+        "img": "images/icons/steam-svgrepo-com.svg",
+        "url": "https://store.steampowered.com/app/2868840/Slay_the_Spire_2/"
+      }
+    ],
+    "title": {
+      "be": "Slay the Spire 2",
+      "ru": "Slay the Spire 2",
+      "en": "Slay the Spire 2",
+      "pl": "Slay the Spire 2"
+    },
+    "cardPlatforms": {
+      "be": "pc · афіцыйны правапіс",
+      "ru": "PC · официальное написание",
+      "en": "PC · official spelling",
+      "pl": "PC · oficjalna ortografia"
+    },
+    "description": {
+      "be": "Знакавы роглайк вяртаецца. Збярыце ўнікальную калоду, сыдзіцеся ў бітве з пачварнымі істотамі і адкрыйце рэліквіі невераемнай моцы. Усё гэта ў Slay the Spire 2!",
+      "ru": "Slay the Spire 2 — долгожданное продолжение роглайк-колодостроительного хита. Новая команда из 5 героев, различные варианты актов, кооператив до 4 игроков и десятки новых механик ждут на вершине Шпиля.",
+      "en": "Slay the Spire 2 is the long-awaited sequel to the roguelike deck-building hit. A new team of 5 heroes, varying act layouts, co-op for up to 4 players, and dozens of new mechanics await at the top of the Spire.",
+      "pl": "Slay the Spire 2 to długo wyczekiwana kontynuacja roguelike'owego hitu o budowaniu talii. Nowa drużyna 5 bohaterów, zmienne układy aktów, kooperacja dla 4 graczy i dziesiątki nowych mechaników czekają na szczycie Spire."
+    },
+    "meta": {
+      "words": {
+        "be": "~57.000",
+        "ru": "~57.000",
+        "en": "~57.000",
+        "pl": "~57.000"
+      },
+      "translators": {
+        "be": "Ueschar, aerialfiddle, Dymniška",
+        "ru": "Ueschar, aerialfiddle, Dymniška",
+        "en": "Ueschar, aerialfiddle, Dymniška",
+        "pl": "Ueschar, aerialfiddle, Dymniška"
+      },
+      "genre": {
+        "be": "Роглайк са стварэннем калоды",
+        "ru": "Роглайк c созданием колоды",
+        "en": "Roguelike deck-building",
+        "pl": "Roguelike deck-building"
+      },
+      "developer": "Mega Crit"
+    },
+    "downloads": [
+      {
+        "platform": {
+          "be": "PC версія",
+          "ru": "Версия для PC",
+          "en": "PC version",
+          "pl": "Wersja PC"
+        },
+        "links": [
+          {
+            "text": {
+              "be": "Nexus",
+              "ru": "Nexus",
+              "en": "Nexus",
+              "pl": "Nexus"
+            },
+            "url": "https://www.nexusmods.com/slaythespire2/mods/1162"
+          },
+          {
+            "text": {
+              "be": "Mega",
+              "ru": "Mega",
+              "en": "Mega",
+              "pl": "Mega"
+            },
+            "url": "https://mega.nz/folder/LypR0LBT#-LAPO3GpoPdrACof3VbVkw"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "valheim",
+    "pageUrl": "games/valheim.html",
+    "cover": "images/valheim_img.png",
+    "screenshots": [
+      "images/valheim/3055-1747002614-114613899.webp",
+      "images/valheim/3055-1747002677-635592845.webp",
+      "images/valheim/3055-1747002678-1503626493.webp",
+      "images/valheim/3055-1747002682-2019291598.webp",
+      "images/valheim/3055-1747003001-1815005726.webp"
+    ],
+    "icons": [
+      {
+        "alt": "Steam",
+        "img": "images/icons/steam-svgrepo-com.svg",
+        "url": "https://store.steampowered.com/app/892970/Valheim/"
+      },
+      {
+        "alt": "Xbox",
+        "img": "images/icons/xbox-svgrepo-com.svg",
+        "url": "https://www.xbox.com/pl-pl/games/store/valheim-wyprobuj-gre/9ncbl78cg9n7"
+      }
+    ],
+    "title": {
+      "be": "Valheim",
+      "ru": "Valheim",
+      "en": "Valheim",
+      "pl": "Valheim"
+    },
+    "cardPlatforms": {
+      "be": "pc · афіцыйны правапіс",
+      "ru": "PC · официальная орфография",
+      "en": "PC · official spelling",
+      "pl": "PC · oficjalna ortografia"
+    },
+    "description": {
+      "be": "Хардкорная гульня для 1–10 гульцоў пра даследаванне і выжыванне, дзеянне якой адбываецца ў працэдурна згенераваным «чыстцы», натхнёным скандынаўскай міфалогіяй. Змагайцеся, будуйце і заваёўвайце — няхай пра вас напішуць сагу, годную славы Одзіна!",
+      "ru": "Хардкорная игра для 1–10 игроков про исследование и выживание, действие которой разворачивается в процедурно сгенерированном «чистилище», вдохновлённом скандинавской мифологией. Сражайтесь, стройте и завоёвывайте — пусть о вас напишут сагу, достойную славы Одина!",
+      "en": "A hardcore exploration and survival game for 1–10 players, set in a procedurally generated “purgatory” inspired by Norse mythology. Fight, build, and conquer — let them write a saga about you, worthy of Odin’s glory!",
+      "pl": "Hardcore’owa gra o eksploracji i przetrwaniu dla 1–10 graczy, osadzona w proceduralnie generowanym „czyśćcu” inspirowanym mitologią nordycką. Walcz, buduj i podbijaj — niech powstanie o Tobie saga godna chwały Odyna!"
+    },
+    "meta": {
+      "words": {
+        "be": "~30.000",
+        "ru": "~30 000",
+        "en": "~30,000",
+        "pl": "~30 000"
+      },
+      "translators": {
+        "be": "Ueschar, Dymniška, Данік. Kastuś",
+        "ru": "Михалёв Александр, Dymniška, Данік. Kastuś",
+        "en": "Міхалеў Аляксандр, Dymniška, Данік. Kastuś",
+        "pl": "Mikhaleŭ Aliaksandr, Dymniška, Danik. Kastuś"
+      },
+      "genre": {
+        "be": "Survival / Open World",
+        "ru": "Survival / Open World",
+        "en": "Survival / Open World",
+        "pl": "Survival / Open World"
+      },
+      "developer": "Iron Gate Studio"
+    },
+    "downloads": [
+      {
+        "platform": {
+          "be": "PC версія",
+          "ru": "PC версия",
+          "en": "PC version",
+          "pl": "Wersja PC"
+        },
+        "links": [
+          {
+            "text": {
+              "be": "Nexus",
+              "ru": "Nexus",
+              "en": "Nexus",
+              "pl": "Nexus"
+            },
+            "url": "https://www.nexusmods.com/valheim/mods/3055"
+          },
+          {
+            "text": {
+              "be": "Thunderstore",
+              "ru": "Thunderstore",
+              "en": "Thunderstore",
+              "pl": "Thunderstore"
+            },
+            "url": "https://thunderstore.io/c/valheim/p/lokar/Bielarusizatar_Valheim_Belarusian_Translation/"
+          },
+          {
+            "text": {
+              "be": "Mega",
+              "ru": "Mega",
+              "en": "Mega",
+              "pl": "Mega"
+            },
+            "url": "https://mega.nz/folder/GiBBTIRa#9gtGmuapCbm4S_IwucE4XQ"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,5 +1,9 @@
 {
   "lang": { "short": "PL" },
+  "meta": {
+    "title": "Łokar — Białoruskie lokalizacje gier",
+    "description": "Łokar — białoruskie lokalizacje, tłumaczenia gier. Pobierz tłumaczenia, mody, zrzuty ekranu. Stardew Valley, Valheim, Heroes 3, Mouthwashing i inne."
+  },
   "nav": {
     "catalog": "Katalog",
     "support": "Wesprzyj"

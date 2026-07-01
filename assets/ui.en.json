@@ -1,5 +1,9 @@
 {
   "lang": { "short": "EN" },
+  "meta": {
+    "title": "Łokar — Belarusian game localizations",
+    "description": "Łokar — Belarusian game localizations, translators, game translations. Download translations, mods, screenshots. Stardew Valley, Valheim, Heroes 3, Mouthwashing and more."
+  },
   "nav": {
     "catalog": "Catalog",
     "support": "Support"
@@ -34,6 +38,9 @@
   },
   "cards": {
     "more": "Details"
+  },
+  "common": {
+    "dash": "—"
   }
 }
 

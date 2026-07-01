@@ -33,7 +33,14 @@
   }
 
   async function loadGames() {
-    GAMES = await loadJSON(`assets/games.${LANG}.json`);
+    GAMES = await loadJSON(`assets/games.json`);
+  }
+
+  function langVal(obj) {
+    if (obj && typeof obj === "object" && !Array.isArray(obj)) {
+      return obj[LANG] ?? obj.be ?? Object.values(obj)[0] ?? "";
+    }
+    return obj ?? "";
   }
 
   // ---------- UI apply (for static HTML strings) ----------
@@ -47,6 +54,13 @@
 
     // Set page lang attribute
     document.documentElement.lang = LANG;
+
+    // Update meta title & description per language
+    const metaTitle = getByPath(UI, "meta.title");
+    if (metaTitle) document.title = String(metaTitle);
+    const metaDesc = getByPath(UI, "meta.description");
+    const metaDescEl = document.querySelector("meta[name='description']");
+    if (metaDesc && metaDescEl) metaDescEl.setAttribute("content", String(metaDesc));
 
     // data-ui -> textContent / innerHTML if contains \n
     document.querySelectorAll("[data-ui]").forEach((el) => {
@@ -160,8 +174,9 @@
   }
 
   function getCardDescription(game) {
-    if (game.cardDescription) return game.cardDescription;
-    const plain = stripHtml(game.description || "");
+    const desc = langVal(game.cardDescription) || langVal(game.description);
+    if (!desc) return "";
+    const plain = stripHtml(desc);
     if (!plain) return "";
     const max = 180;
     return plain.length > max ? plain.slice(0, max - 1) + "…" : plain;
@@ -175,18 +190,18 @@
 
     const img = document.createElement("img");
     img.src = game.cover;
-    img.alt = game.title;
+    img.alt = langVal(game.title);
 
     const info = document.createElement("div");
     info.className = "game-info";
 
     const h2 = document.createElement("h2");
     h2.className = "game-title";
-    h2.textContent = game.title;
+    h2.textContent = langVal(game.title);
 
     const platforms = document.createElement("div");
     platforms.className = "game-platforms";
-    platforms.textContent = game.cardPlatforms || "";
+    platforms.textContent = langVal(game.cardPlatforms);
 
     const desc = document.createElement("p");
     desc.className = "game-desc";
@@ -200,14 +215,11 @@
     const btnWrap = document.createElement("div");
     btnWrap.className = "button-container";
 
-    const btn = document.createElement("a");
-    btn.href = game.pageUrl || "#";
+    const btn = document.createElement("button");
     btn.className = "game-button";
+    btn.type = "button";
     btn.textContent = getByPath(UI, "cards.more") || "Details";
     btn.addEventListener("click", (e) => {
-      // keep modal behavior, but allow open in new tab if user wants
-      if (e.ctrlKey || e.metaKey || e.shiftKey) return;
-      e.preventDefault();
       e.stopPropagation();
       openGameModal(game);
     });
@@ -247,11 +259,11 @@
     if (metaGrid) metaGrid.innerHTML = "";
     if (iconsContainer) iconsContainer.innerHTML = "";
 
-    if (modalTitle) modalTitle.textContent = game.title;
+    if (modalTitle) modalTitle.textContent = langVal(game.title);
     if (modalImage) modalImage.src = game.cover;
     if (modalImageMobile) modalImageMobile.src = game.cover;
 
-    if (modalDescription) modalDescription.innerHTML = game.description || "";
+    if (modalDescription) modalDescription.innerHTML = langVal(game.description);
 
     renderIcons(game.icons || []);
     renderMetaBadges(game.meta || {});
@@ -301,9 +313,9 @@
     const dash = getByPath(UI, "common.dash") ?? "—";
     const items = [
       { key: getByPath(UI, "metaLabels.developer") ?? "Developer:", value: meta.developer ?? dash },
-      { key: getByPath(UI, "metaLabels.genre") ?? "Genre:", value: meta.genre ?? dash },
-      { key: getByPath(UI, "metaLabels.authors") ?? "Translators:", value: meta.translators ?? dash },
-      { key: getByPath(UI, "metaLabels.words") ?? "Word count:", value: meta.words ?? dash, cls: "words" }
+      { key: getByPath(UI, "metaLabels.genre") ?? "Genre:", value: langVal(meta.genre) || dash },
+      { key: getByPath(UI, "metaLabels.authors") ?? "Translators:", value: langVal(meta.translators) || dash },
+      { key: getByPath(UI, "metaLabels.words") ?? "Word count:", value: langVal(meta.words) || dash, cls: "words" }
     ];
 
     items.forEach((item) => {
@@ -332,7 +344,7 @@
 
       const platformTitle = document.createElement("div");
       platformTitle.classList.add("modal-platform-title");
-      platformTitle.textContent = platform.platform;
+      platformTitle.textContent = langVal(platform.platform);
       platformDiv.appendChild(platformTitle);
 
       const buttonsDiv = document.createElement("div");
@@ -342,7 +354,7 @@
         const a = document.createElement("a");
         a.href = link.url;
         a.classList.add("game-button");
-        a.textContent = link.text;
+        a.textContent = langVal(link.text);
         a.target = "_blank";
         a.rel = "noopener noreferrer";
         buttonsDiv.appendChild(a);

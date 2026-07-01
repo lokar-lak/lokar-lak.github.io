@@ -11,16 +11,17 @@ Custom domain via `CNAME`, hosted on GitHub Pages. No build step, no CI, no pack
 - `assets/app.js` — vanilla JS: language switcher, game card rendering, modal/carousel.
 - `assets/styles.css` — all CSS, mobile-first, no preprocessor.
 - `assets/ui.{be,ru,en,pl}.json` — UI text strings per language.
-- `assets/games.{be,ru,en,pl}.json` — game catalog data per language.
+- `assets/games.json` — consolidated game catalog with language sub-objects (`{ be, ru, en, pl }`).
+  Access with `langVal(game.title)` helper in `app.js`.
 - `images/` — game covers, screenshots (`images/` subdir per game), store icons.
 - `icons/` — favicons + PWA icons (referenced from `site.webmanifest`).
 
 ## Adding a game
 
-1. Add entry to **all four** `games.*.json` files (keep in sync).
+1. Add entry to `assets/games.json` with language sub-objects for translatable fields (`title: { be, ru, en, pl }`).
 2. Add cover image + screenshot files to `images/`.
 3. Store icons (Steam, GOG, etc.) go in `images/icons/`.
-4. `pageUrl` points to a per-game HTML page (`games/*.html`). If absent, the modal still works from the main page.
+4. `pageUrl` is kept for reference but cards use JS-only modal (no link href).
 
 ## i18n conventions
 
