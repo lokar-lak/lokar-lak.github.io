@@ -130,9 +130,9 @@
       },
       "translators": {
         "be": "Аляксандр Шумскі, Ueschar, Vasil Pupkin",
-        "ru": "Аляксандр Шумскі, Аляксандр Міхалеў, Vasil Pupkin",
-        "en": "Аляксандр Шумскі, Аляксандр Міхалеў, Vasil Pupkin",
-        "pl": "Aляксандр Шумскі, Aляксандр Міхалеў, Vasil Pupkin"
+        "ru": "Аляксандр Шумскі, Ueschar, Vasil Pupkin",
+        "en": "Аляксандр Шумскі, Ueschar, Vasil Pupkin",
+        "pl": "Aляксандр Шумскі, Ueschar, Vasil Pupkin"
       },
       "genre": {
         "be": "Пакрокавая стратэгія",
@@ -211,9 +211,9 @@
       },
       "translators": {
         "be": "Dymniška, Ueschar",
-        "ru": "Dymniška, Михалёв Александр",
-        "en": "Dymniška, Міхалеў Аляксандр",
-        "pl": "Dymniška, Mikhaleŭ Aliaksandr"
+        "ru": "Dymniška, Ueschar",
+        "en": "Dymniška, Ueschar",
+        "pl": "Dymniška, Ueschar"
       },
       "genre": {
         "be": "Вар’яцтва / Жахі",
@@ -481,6 +481,15 @@
           },
           {
             "text": {
+              "be": "Steam",
+              "ru": "Steam",
+              "en": "Steam",
+              "pl": "Steam"
+            },
+            "url": "https://steamcommunity.com/sharedfiles/filedetails/?id=3755159129"
+          },
+          {
+            "text": {
               "be": "Mega",
               "ru": "Mega",
               "en": "Mega",
@@ -547,7 +556,7 @@
         "pl": "Mikhaleŭ Aliaksandr, Dymniška, Danik. Kastuś"
       },
       "genre": {
-        "be": "Survival / Open World",
+        "be": "Выжыванне / Адкрыты сусвет",
         "ru": "Survival / Open World",
         "en": "Survival / Open World",
         "pl": "Survival / Open World"
